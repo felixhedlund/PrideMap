@@ -45,7 +45,6 @@
          Create a gradient from the colors provided with evenly spaced stops
          */
         let colorspace = CGColorSpaceCreateDeviceRGB()
-        print("Number of gradient stops: \(calculateNumberOfStops())")
         let stopValues = calculateNumberOfStops()
         let locations: [CGFloat] = stopValues
         let gradient = CGGradient(colorsSpace: colorspace, colors: cgColors as CFArray, locations: locations)
