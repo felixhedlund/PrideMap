@@ -7,33 +7,213 @@
 //
 
 import UIKit
-
-class OnboardingViewController: UIViewController {
-
+import Cheers
+import RazzleDazzle
+class OnboardingViewController: AnimatedPagingScrollViewController {
+    fileprivate var pageControl: UIPageControl!
+    fileprivate var welcomeLabel: UILabel!
+    fileprivate var diaryView: UIView!
+    
+    var continueButton: UIButton!
+    var textField: UITextField!
+    var textFieldBorder: UIView!
+    
+    var shouldEnableContinueAtStart = false
+    
+    var cheerView: CheerView?
+    var circleView: CircleView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        //        self.addBackgroundShape()
+        self.addPageControl()
+        self.addFirstViewContent()
+        self.addSecondPageContent()
+        self.addThirdPageContent()
+        self.addFourthPageContent()
+        self.animateCurrentFrame()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func numberOfPages() -> Int {
+        // Tell the scroll view how many pages it has
+        return 4
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
-    */
+    
+    override var prefersStatusBarHidden : Bool {
+        return true
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        super.scrollViewDidScroll(scrollView)
+        pageControl.currentPage = Int(pageOffset + 0.5)
+        trySetNewBackgroundColor(pageNumber: pageControl.currentPage)
+    }
+    
+    private var currentSetPageNumber = 0
+    private func trySetNewBackgroundColor(pageNumber: Int){
+        if pageNumber != currentSetPageNumber{
+            switch pageNumber {
+            case 0:
+                break
+//                circleView?.animateWithColor(color: UIColor.gray.withAlphaComponent(0.1))
+            case 1:
+                break
+//                circleView?.animateWithColor(color: UIColor.gray.withAlphaComponent(0.05))
+            case 2:
+                break
+//                circleView?.animateWithColor(color: UIColor.gray.withAlphaComponent(0.025))
+            case 3:
+                break
+//                circleView?.animateWithColor(color: UIColor.clear)
+            default:
+                return
+            }
+        }
+        currentSetPageNumber = pageNumber
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    private func addPageControl(){
+        self.pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3)
+        pageControl.numberOfPages = self.numberOfPages()
+        pageControl.currentPage = 0
+        self.contentView.addSubview(pageControl)
+        let bottom = NSLayoutConstraint(item: pageControl, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -24)
+        bottom.isActive = true
+        keepView(pageControl, onPages: [0,1,2,3])
+        
+        let animation = ConstraintConstantAnimation(superview: pageControl, constraint: bottom)
+        animation[0] = -24
+        animation[1] = -24//-self.view.frame.height/2
+        animation[2] = -24
+        animator.addAnimation(animation)
+    }
+    
+}
+
+extension OnboardingViewController{
+    func addFirstViewContent(){
+        addWelcomeLabel()
+        addCheers()
+    }
+    
+    private func addWelcomeLabel(){
+        let label = UILabel()
+        label.text = "Välkommen till PrajdMap"
+        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 30)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
+        label.textAlignment = .center
+        self.welcomeLabel = label
+        self.contentView.addSubview(label)
+        NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 24).isActive = true
+        NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1, constant: -48).isActive = true
+        keepView(label, onPages: [0])
+        
+        let animate = AlphaAnimation(view: label)
+        animate[-0.5] = 0
+        animate[0] = 1
+        animate[0.5] = 0
+        self.animator.addAnimation(animate)
+    }
+    
+    private func addCheers(){
+        if let circleView = UINib.init(nibName: "CircleView", bundle: nil).instantiate(withOwner: self)[0] as? CircleView {
+            self.circleView = circleView
+            circleView.clipsToBounds = true
+            circleView.backgroundColor = UIColor.clear
+            self.contentView.addSubview(circleView)
+            NSLayoutConstraint(item: circleView, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
+            let widthC = NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 0.25, constant: 0)
+            widthC.isActive = true
+            NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: circleView, attribute: .height, multiplier: 1, constant: 0).isActive = true
+            keepView(circleView, onPages: [3, 3.5])
+            
+            let animate = ConstraintMultiplierAnimation(superview: scrollView, constraint: widthC, attribute: .width, referenceView: circleView)
+            animate[0] = 0.25
+            animate[1] = 0.5
+            animate[2] = 0.75
+            animate[3] = 1
+            animator.addAnimation(animate)
+            
+            
+            
+            
+            let animate2 = AlphaAnimation(view: circleView)
+            animate2[0] = 0.25
+            animate2[1] = 0.5
+            animate2[2] = 0.75
+            animate2[3] = 1
+            animator.addAnimation(animate2)
+            
+            
+            let cheerView = CheerView()
+            circleView.cheerContainer.addSubview(cheerView)
+            let heart = NSAttributedString(string: "❤️", attributes: [
+                NSFontAttributeName: UIFont.systemFont(ofSize: 15)
+                ])
+            let heart2 = NSAttributedString(string: "💛", attributes: [
+                NSFontAttributeName: UIFont.systemFont(ofSize: 15)
+                ])
+            let heart3 = NSAttributedString(string: "💚", attributes: [
+                NSFontAttributeName: UIFont.systemFont(ofSize: 15)
+                ])
+            let heart4 = NSAttributedString(string: "💙", attributes: [
+                NSFontAttributeName: UIFont.systemFont(ofSize: 15)
+                ])
+            let heart5 = NSAttributedString(string: "💜", attributes: [
+                NSFontAttributeName: UIFont.systemFont(ofSize: 15)
+                ])
+            cheerView.config.particle = .text(CGSize(width: 100, height: 100), [heart, heart2, heart3, heart4, heart5])
+            cheerView.start()
+            self.cheerView = cheerView
+        }
+
+    }
+    
+}
+
+extension OnboardingViewController{
+    func addSecondPageContent(){
+        
+    }
+    
+}
+
+extension OnboardingViewController{
+    func addThirdPageContent(){
+    }
+}
+
+extension OnboardingViewController: UITextFieldDelegate{
+    func addFourthPageContent(){
+
+    }
 
 }
+

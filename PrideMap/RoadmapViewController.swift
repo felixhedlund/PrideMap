@@ -22,7 +22,7 @@ class RoadmapViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "Map", sender: view)
+        self.performSegue(withIdentifier: "Onboarding", sender: view)
     }
 
     /*

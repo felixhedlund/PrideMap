@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4B7988058D688AA85EAE97 /* Pods_PrideMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */; };
 		F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */; };
 		F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */; };
+		F772E24E1F17F46A00264DD8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24D1F17F46A00264DD8 /* CircleView.swift */; };
+		F772E2501F17FA4500264DD8 /* CircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F772E24F1F17FA4500264DD8 /* CircleView.xib */; };
 		F77F1E791F17A3F5001DD7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F1E781F17A3F5001DD7E5 /* AppDelegate.swift */; };
 		F77F1E7E1F17A3F5001DD7E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */; };
 		F77F1E801F17A3F5001DD7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */; };
@@ -18,8 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.debug.xcconfig"; sourceTree = "<group>"; };
+		F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.release.xcconfig"; sourceTree = "<group>"; };
 		F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
 		F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F772E24D1F17F46A00264DD8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		F772E24F1F17FA4500264DD8 /* CircleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleView.xib; sourceTree = "<group>"; };
 		F77F1E751F17A3F5001DD7E5 /* PrideMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrideMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77F1E781F17A3F5001DD7E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F77F1E7D1F17A3F5001DD7E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		F77F1E841F17A3F5001DD7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F77F1E8A1F17A480001DD7E5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F77F1E8C1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLTGradientPathRenderer.swift; sourceTree = "<group>"; };
+		FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrideMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,18 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4B7988058D688AA85EAE97 /* Pods_PrideMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFA1DA090D8B076C265B6A84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */,
+				F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F77F1E6C1F17A3F5001DD7E5 = {
 			isa = PBXGroup;
 			children = (
 				F77F1E771F17A3F5001DD7E5 /* PrideMap */,
 				F77F1E761F17A3F5001DD7E5 /* Products */,
 				F77F1E8E1F17C0B1001DD7E5 /* Frameworks */,
+				BFA1DA090D8B076C265B6A84 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +85,9 @@
 				F77F1E8C1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift */,
 				F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */,
 				F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */,
+				F772E24D1F17F46A00264DD8 /* CircleView.swift */,
 				F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */,
+				F772E24F1F17FA4500264DD8 /* CircleView.xib */,
 				F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */,
 				F77F1E811F17A3F5001DD7E5 /* LaunchScreen.storyboard */,
 				F77F1E841F17A3F5001DD7E5 /* Info.plist */,
@@ -77,6 +98,7 @@
 		F77F1E8E1F17C0B1001DD7E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F77F1E871F17A3F5001DD7E5 /* Build configuration list for PBXNativeTarget "PrideMap" */;
 			buildPhases = (
+				44E025E571AA4194CC7E08F0 /* [CP] Check Pods Manifest.lock */,
 				F77F1E711F17A3F5001DD7E5 /* Sources */,
 				F77F1E721F17A3F5001DD7E5 /* Frameworks */,
 				F77F1E731F17A3F5001DD7E5 /* Resources */,
+				EA15D4CEF53F38E7BF67C83C /* [CP] Embed Pods Frameworks */,
+				1983F289F3246AC633725F2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F772E2501F17FA4500264DD8 /* CircleView.xib in Resources */,
 				F77F1E831F17A3F5001DD7E5 /* LaunchScreen.storyboard in Resources */,
 				F77F1E801F17A3F5001DD7E5 /* Assets.xcassets in Resources */,
 				F77F1E7E1F17A3F5001DD7E5 /* Main.storyboard in Resources */,
@@ -154,11 +180,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1983F289F3246AC633725F2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44E025E571AA4194CC7E08F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA15D4CEF53F38E7BF67C83C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F77F1E711F17A3F5001DD7E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F772E24E1F17F46A00264DD8 /* CircleView.swift in Sources */,
 				F77F1E791F17A3F5001DD7E5 /* AppDelegate.swift in Sources */,
 				F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */,
 				F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */,
@@ -284,6 +359,7 @@
 		};
 		F77F1E881F17A3F5001DD7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNUQBB7ZW;
@@ -298,6 +374,7 @@
 		};
 		F77F1E891F17A3F5001DD7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NRNUQBB7ZW;
