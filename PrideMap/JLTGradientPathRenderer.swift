@@ -45,6 +45,7 @@
          Create a gradient from the colors provided with evenly spaced stops
          */
         let colorspace = CGColorSpaceCreateDeviceRGB()
+        print("Number of gradient stops: \(calculateNumberOfStops())")
         let stopValues = calculateNumberOfStops()
         let locations: [CGFloat] = stopValues
         let gradient = CGGradient(colorsSpace: colorspace, colors: cgColors as CFArray, locations: locations)
@@ -70,8 +71,8 @@
          Create bounding box around path and get top and bottom points
          */
         let boundingBox = self.path.boundingBoxOfPath
-        let gradientStart = boundingBox.origin
-        let gradientEnd   = CGPoint(x:boundingBox.maxX, y:boundingBox.maxY)
+        let gradientStart = CGPoint(x:boundingBox.minX, y:boundingBox.maxY)
+        let gradientEnd   = CGPoint(x:boundingBox.maxX, y:boundingBox.minY)
         
         /*
          Draw the gradient in the clipped context of the path
@@ -111,13 +112,9 @@
     
     //MARK: Helper Methods
     fileprivate func calculateNumberOfStops() -> [CGFloat] {
+        let array: [CGFloat] = [0.0, 0.2, 0.4, 0.6, 0.8, 1]
         
-        let stopDifference = (1 / Double(cgColors.count))
-        
-        return Array(stride(from: 0, to: 1+stopDifference, by: stopDifference))
-            .map { (value) -> CGFloat in
-                return CGFloat(value)
-        }
+        return array
     }
     
  }
