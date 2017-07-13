@@ -8,17 +8,31 @@
 
 import UIKit
 import MapKit
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     var routeLine: MKPolyline!
+    var locationManager: CLLocationManager!
+    private var currentLocation: CLLocation?
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Check for Location Services
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+        map.showsUserLocation = true
+        
         let sourceLocation = CLLocationCoordinate2D(latitude: 59.326798, longitude: 18.043357)
         let destinationLocation = CLLocationCoordinate2D(latitude: 59.345832, longitude: 18.082318)
         let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
         let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
-        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+//        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+//        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
         let sourceAnnotation = MKPointAnnotation()
         sourceAnnotation.title = "Start: Stockholm Pride Parade"
         
@@ -110,6 +124,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         return annotationView
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        defer { currentLocation = locations.last }
+        
+//        if currentLocation == nil {
+//            // Zoom to user location
+//            if let userLocation = locations.last {
+//                let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
+//                map.setRegion(viewRegion, animated: false)
+//            }
+//        }
     }
     
     

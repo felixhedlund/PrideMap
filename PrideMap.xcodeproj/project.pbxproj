@@ -42,6 +42,7 @@
 			children = (
 				F77F1E771F17A3F5001DD7E5 /* PrideMap */,
 				F77F1E761F17A3F5001DD7E5 /* Products */,
+				F77F1E8E1F17C0B1001DD7E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +66,13 @@
 				F77F1E841F17A3F5001DD7E5 /* Info.plist */,
 			);
 			path = PrideMap;
+			sourceTree = "<group>";
+		};
+		F77F1E8E1F17C0B1001DD7E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +109,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = NRNUQBB7ZW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -308,6 +321,7 @@
 				F77F1E891F17A3F5001DD7E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
