@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tIM-1p-bV8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uXU-Mr-Rd5">
+            <objects>
+                <navigationController modalTransitionStyle="crossDissolve" navigationBarHidden="YES" id="tIM-1p-bV8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OAZ-JB-pMX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="r4R-HQ-v8x" kind="relationship" relationship="rootViewController" id="j0p-9b-jiH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6a-EK-1bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1561" y="139"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="KVG-6c-Zsn">
+            <objects>
+                <viewController id="jlW-E0-ZxG" customClass="OnboardingViewController" customModule="PrideMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1F-LU-0Ay"/>
+                        <viewControllerLayoutGuide type="bottom" id="rPQ-C1-wbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPC-Qc-Tqx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Map" id="LXc-yV-shJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wA2-g7-MSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-683"/>
+        </scene>
+        <!--Roadmap View Controller-->
+        <scene sceneID="NVa-OF-XLg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfx-pJ-O4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="r4R-HQ-v8x" customClass="RoadmapViewController" customModule="PrideMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4me-WY-yvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="PNo-vI-Qw3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nZg-Cs-oNO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SlicePDF" translatesAutoresizingMaskIntoConstraints="NO" id="nLR-R0-POG">
+                                <rect key="frame" x="112" y="242" width="150" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="I1Z-PJ-q0c"/>
+                                    <constraint firstAttribute="width" secondItem="nLR-R0-POG" secondAttribute="height" multiplier="150:183" id="vSG-ks-2HP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLR-R0-POG" firstAttribute="width" secondItem="nLR-R0-POG" secondAttribute="height" multiplier="150:183" id="3tg-M9-tK1"/>
+                            <constraint firstItem="nLR-R0-POG" firstAttribute="centerX" secondItem="nZg-Cs-oNO" secondAttribute="centerX" id="SMY-4L-nPa"/>
+                            <constraint firstItem="nLR-R0-POG" firstAttribute="centerY" secondItem="nZg-Cs-oNO" secondAttribute="centerY" id="uNO-60-9hK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KWg-gL-RPm"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Map" id="9UB-1V-pX8"/>
+                        <segue destination="jlW-E0-ZxG" kind="show" identifier="Onboarding" id="9Md-Lr-UuA"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-540" y="139"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -42,7 +116,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+            <point key="canvasLocation" x="553" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SlicePDF" width="150" height="183"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9UB-1V-pX8"/>
+    </inferredMetricsTieBreakers>
 </document>
