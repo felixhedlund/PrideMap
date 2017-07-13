@@ -18,7 +18,7 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     var textField: UITextField!
     var textFieldBorder: UIView!
     
-    var shouldEnableContinueAtStart = false
+    var shouldEnableContinueAtStart = true
     
     var cheerView: CheerView?
     var circleView: CircleView?
@@ -190,6 +190,7 @@ extension OnboardingViewController{
                 NSFontAttributeName: UIFont.systemFont(ofSize: 15)
                 ])
             cheerView.config.particle = .text(CGSize(width: 100, height: 100), [heart, heart2, heart3, heart4, heart5])
+            cheerView.config.colors = [#colorLiteral(red: 0.8941176471, green: 0.01176470588, blue: 0.01176470588, alpha: 1),#colorLiteral(red: 1, green: 0.5490196078, blue: 0, alpha: 1),#colorLiteral(red: 1, green: 0.9294117647, blue: 0, alpha: 1),#colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1),#colorLiteral(red: 0, green: 0.3019607843, blue: 1, alpha: 1),#colorLiteral(red: 0.4588235294, green: 0.02745098039, blue: 0.5294117647, alpha: 1)]
             cheerView.start()
             self.cheerView = cheerView
         }
@@ -212,7 +213,41 @@ extension OnboardingViewController{
 
 extension OnboardingViewController: UITextFieldDelegate{
     func addFourthPageContent(){
-
+        addContinueButton()
+    }
+    
+    private func addContinueButton(){
+        continueButton = UIButton()
+        continueButton.tintColor = UIColor.black
+        continueButton.setTitle(NSLocalizedString("Fortsätt", comment: "Continue string"), for: .normal)
+        if shouldEnableContinueAtStart{
+            continueButton.isEnabled = true
+            continueButton.setTitleColor(UIColor.black, for: .normal)
+        }else{
+            continueButton.isEnabled = false
+            continueButton.setTitleColor(UIColor.black.withAlphaComponent(0.5), for: .normal)
+        }
+        
+        continueButton.showsTouchWhenHighlighted = true
+        
+        continueButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
+        continueButton.addTarget(self, action: #selector(self.didPressContinue(sender:)), for: .touchUpInside)
+        contentView.addSubview(continueButton)
+        
+        NSLayoutConstraint(item: continueButton, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 16).isActive = true
+        keepView(continueButton, onPages: [3])
+        let animate = AlphaAnimation(view: continueButton)
+        animate[2.5] = 0
+        animate[3] = 1
+        animate[3.5] = 0
+        self.animator.addAnimation(animate)
+        
+        
+        
+    }
+    
+    func didPressContinue(sender: UIButton){
+        self.performSegue(withIdentifier: "Map", sender: self)
     }
 
 }

@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03FD00344607F0B7F1D3C492A43483E3 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201F5A0877C8D47A8333F96157909C42 /* ScaleAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		104120CC395EDABB9ED722FA44169296 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BB77EECEF6ECF41B4B52D31ABA7F9 /* PathPositionAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		172E1457C0A629E879E11CD9E64E5574 /* Cheers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14233B143FE42FC7B7760E82DA9BF368 /* Cheers-dummy.m */; };
+		1E501FF631930FE3DC7997FAB99F9AA1 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE1312D976837C8E7D9A7D38DC3013 /* Filmstrip.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		256001F970099651F2E929E8E3D6622C /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E499FE436E04CE4B12CCF51A508BA3 /* CubicBezier.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		32B13EE721B4782D21E92E3D63D51BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		372DE693B2CFCF8A89B005590434979A /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C336A5E7B9149A55DB2D363628C0CF /* ImageGenerator.swift */; };
+		3BF9E7DB8B55531D477341D918623BCC /* RazzleDazzle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42531A1F9ACE14AC4247E9C5A25FEEB1 /* RazzleDazzle-dummy.m */; };
+		3E5206FD1B04CE52AD9F7D7462937D3D /* Cheers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE55DD6AE81143CF631DBD7CF21E7 /* Cheers.swift */; };
+		405DFB5D2F126B04402ED6AEC6D9C7CB /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC90E95B404C70EAC7E3102D1CC678F /* UIView+Transform.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		42A09E94875F3030EB20AFB327A4BC1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AE44C78E751053920292CE101511 /* Config.swift */; };
+		49BA3044FC7FA06A9085B0622DA150B9 /* RazzleDazzle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD34545B0505CBEEF2079BEBB5C37DC5 /* RazzleDazzle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50E00E7D1C2D810A6C3D8707FDC26969 /* RazzleDazzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6106CBAB56F8D4813B5519EC38434A0D /* RazzleDazzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		597ACF1C06716728C4F0E808848933D6 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E6A5931455CAD1FFF02D705E5B063 /* AnimatedPagingScrollViewController.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		599BDD28B1D7EB3002393210AA7D7EBB /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B1491E883DB28AF3705DEE3666475 /* AlphaAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		600F5F1777159EC2E185DC0EB3EC9546 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594F027C65614BBEB23E8BD85074537 /* EasingFunction.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		63A0AEC411E5C0547EDF072AD3BE75D1 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E57F3C9C28138DDE8849138657E4B /* Interpolatable.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		697AD3FAAD311F2472460937A12575D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		6ACCA660F948B548BB71581823857E2E /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C1532198E67408D3F35B212E20F9C0 /* LabelTextColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		86CAF9D11F2B3CE2D94B502DB650D757 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FB20C79B60314817019253DC8FE1BA /* ScrollViewPageConstraintAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		8B06AFEECFC58AA709E91AD1AF8B735A /* Cheers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB3102C08024C1A4B7676F4A0585758 /* Cheers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FA83235E656C1963FAD442886BE9791 /* Pods-PrideMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DEA1CD38564C128C2C8E4B4B710F3 /* Pods-PrideMap-dummy.m */; };
+		96A406B95E2E84263AE471BC2C3C6C51 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D3E410CB75739C5EB7A4E9F772735 /* RotationAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		A6B5AC728DA2D9BABE57F7D3B3FA940D /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C292B56BBD4A442DBE6B622C2F68E03 /* ConstraintMultiplierAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		C0F9B7A07339A4D49982897555C6642F /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E90346D24416E38B66ABA2D30E02B8 /* LayerStrokeEndAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		C1DEA9433739E9400086D0B81840479D /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D390E4D9ADC5C0C9CC5696A06610746 /* Animatable.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		CD1116CD0B5E7C5D07970708915FEA49 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905305A4D1D70A13BADE3187E5427EA0 /* ConstraintConstantAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		CEC3FC882017AF8A02D40B0DD35643FE /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A473F9BB6F35C54866528CCEACDD616A /* LayerFillColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		D3BC25C86C1643F53CF2524F84EDB2FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		D56C5B673AFC97C11CA85832DD3D22B7 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7903EE9C0B08884788FCEA15F68C24A /* BackgroundColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		DCFE0CF7B7F7C806339EE3CE9462AB55 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53667446F5957C29A62D82CF32634FE /* Extensions.swift */; };
+		DE584B753DEA0E6BE638C1D62CB33404 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59077F0C9EDE46196D4710B2F1399 /* Animator.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		E0E65ABC2AE97CEF6FFD7764339A0519 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DCF2743CE54006B64553705B436DD /* LayerStrokeColorAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		E41A6E53A6CB29E47FAC6BAA557FA90A /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19453FB2D07D195C49B52167549C5E /* CornerRadiusAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		EA1B211C40F649181F944B792EBF1F35 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020612C166166AF04909DA6155441CA6 /* HideAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		EFBF110C4E2A951AD6E0CA2A03E8A5B6 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38EDDC9EF3EAB4A9D4ECF8303C6F6B /* LayerStrokeStartAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		F37A593303AA8EE111D8F50B0BA63997 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12C9E586928E529D4D417FBA05C47B /* Animation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		F495515B301B62842EBF5CC6D9D1A6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		F79FC7EEA4663918349028DAE2E346B3 /* Pods-PrideMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C724A2DB38AAC7FCC0FACCB949709B /* Pods-PrideMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC1D7CAC03B5A9FA443C315695382B39 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20839AB93D1DE1BDB511CC3AC3B5531 /* TranslationAnimation.swift */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		928B2A41819E2250F3B2BCF6ADA3F5E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E34271A46286014B9E532BD1CE5655EB;
+			remoteInfo = RazzleDazzle;
+		};
+		A0E12733CF0A3EC405107286C757499F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C279FA6C6C73D2194A8215BAE29137F6;
+			remoteInfo = Cheers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008DCF2743CE54006B64553705B436DD /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeColorAnimation.swift; path = Source/LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
+		020612C166166AF04909DA6155441CA6 /* HideAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HideAnimation.swift; path = Source/HideAnimation.swift; sourceTree = "<group>"; };
+		02C336A5E7B9149A55DB2D363628C0CF /* ImageGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageGenerator.swift; path = Sources/ImageGenerator.swift; sourceTree = "<group>"; };
+		0D807B860D5D9834BD377EE7BF421136 /* Cheers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cheers-prefix.pch"; sourceTree = "<group>"; };
+		114E6A5931455CAD1FFF02D705E5B063 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedPagingScrollViewController.swift; path = Source/AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
+		14233B143FE42FC7B7760E82DA9BF368 /* Cheers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cheers-dummy.m"; sourceTree = "<group>"; };
+		167AB8BBBBF2F1D31F3EEF4EEF5BDA4B /* Pods_PrideMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrideMap.framework; path = "Pods-PrideMap.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		201F5A0877C8D47A8333F96157909C42 /* ScaleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScaleAnimation.swift; path = Source/ScaleAnimation.swift; sourceTree = "<group>"; };
+		21E499FE436E04CE4B12CCF51A508BA3 /* CubicBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = Source/CubicBezier.swift; sourceTree = "<group>"; };
+		2586C31970C6FCDA27D54A3D252BAD06 /* Cheers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cheers.modulemap; sourceTree = "<group>"; };
+		338DE55DD6AE81143CF631DBD7CF21E7 /* Cheers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cheers.swift; path = Sources/Cheers.swift; sourceTree = "<group>"; };
+		3D390E4D9ADC5C0C9CC5696A06610746 /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = Source/Animatable.swift; sourceTree = "<group>"; };
+		3DE59077F0C9EDE46196D4710B2F1399 /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Animator.swift; sourceTree = "<group>"; };
+		3ECE1312D976837C8E7D9A7D38DC3013 /* Filmstrip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filmstrip.swift; path = Source/Filmstrip.swift; sourceTree = "<group>"; };
+		42531A1F9ACE14AC4247E9C5A25FEEB1 /* RazzleDazzle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RazzleDazzle-dummy.m"; sourceTree = "<group>"; };
+		42E90346D24416E38B66ABA2D30E02B8 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeEndAnimation.swift; path = Source/LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
+		4594F027C65614BBEB23E8BD85074537 /* EasingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasingFunction.swift; path = Source/EasingFunction.swift; sourceTree = "<group>"; };
+		475B46A47F0CFCA01892CCF32BA4DD77 /* RazzleDazzle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RazzleDazzle.modulemap; sourceTree = "<group>"; };
+		4B5ECD80A7972604BB6098BC93F56827 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F12C9E586928E529D4D417FBA05C47B /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Source/Animation.swift; sourceTree = "<group>"; };
+		6106CBAB56F8D4813B5519EC38434A0D /* RazzleDazzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RazzleDazzle.h; path = Source/RazzleDazzle.h; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		63879894D2D0C844851ABFDDB09BE829 /* RazzleDazzle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RazzleDazzle.xcconfig; sourceTree = "<group>"; };
+		693816D40D66FFCF87CCCD62CB9722FC /* Pods-PrideMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrideMap-acknowledgements.plist"; sourceTree = "<group>"; };
+		6C292B56BBD4A442DBE6B622C2F68E03 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierAnimation.swift; path = Source/ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
+		6D19453FB2D07D195C49B52167549C5E /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerRadiusAnimation.swift; path = Source/CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		77C1532198E67408D3F35B212E20F9C0 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelTextColorAnimation.swift; path = Source/LabelTextColorAnimation.swift; sourceTree = "<group>"; };
+		782F04147478FE11B9F02167FA69CCE9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5512609689F3CCD5B6054282E3785F /* Cheers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cheers.framework; path = Cheers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7EEC2C5A9D46DC7EF93C4537A459C149 /* Pods-PrideMap-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrideMap-frameworks.sh"; sourceTree = "<group>"; };
+		8C15955E4F6318032C0D5316076162D6 /* Pods-PrideMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrideMap.debug.xcconfig"; sourceTree = "<group>"; };
+		8C1BB77EECEF6ECF41B4B52D31ABA7F9 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathPositionAnimation.swift; path = Source/PathPositionAnimation.swift; sourceTree = "<group>"; };
+		8F0D3E410CB75739C5EB7A4E9F772735 /* RotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationAnimation.swift; path = Source/RotationAnimation.swift; sourceTree = "<group>"; };
+		905305A4D1D70A13BADE3187E5427EA0 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantAnimation.swift; path = Source/ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96631DE7184EA35E297F3740742F25A8 /* RazzleDazzle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RazzleDazzle-prefix.pch"; sourceTree = "<group>"; };
+		9A8DEA1CD38564C128C2C8E4B4B710F3 /* Pods-PrideMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrideMap-dummy.m"; sourceTree = "<group>"; };
+		9E7B1491E883DB28AF3705DEE3666475 /* AlphaAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlphaAnimation.swift; path = Source/AlphaAnimation.swift; sourceTree = "<group>"; };
+		A20839AB93D1DE1BDB511CC3AC3B5531 /* TranslationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TranslationAnimation.swift; path = Source/TranslationAnimation.swift; sourceTree = "<group>"; };
+		A35A4A85D53166678C1A2A8FE0E9A78E /* RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RazzleDazzle.framework; path = RazzleDazzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A473F9BB6F35C54866528CCEACDD616A /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerFillColorAnimation.swift; path = Source/LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		AA87AE44C78E751053920292CE101511 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Config.swift; sourceTree = "<group>"; };
+		AB38EDDC9EF3EAB4A9D4ECF8303C6F6B /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerStrokeStartAnimation.swift; path = Source/LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		AE6E57F3C9C28138DDE8849138657E4B /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = Source/Interpolatable.swift; sourceTree = "<group>"; };
+		C1FB20C79B60314817019253DC8FE1BA /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollViewPageConstraintAnimation.swift; path = Source/ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		C260759DD6788E722D29F7B67375FF71 /* Pods-PrideMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrideMap-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C7903EE9C0B08884788FCEA15F68C24A /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundColorAnimation.swift; path = Source/BackgroundColorAnimation.swift; sourceTree = "<group>"; };
+		DBB3102C08024C1A4B7676F4A0585758 /* Cheers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cheers-umbrella.h"; sourceTree = "<group>"; };
+		E3C50B6B54267E1B2B18F9710410BCB9 /* Pods-PrideMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrideMap-resources.sh"; sourceTree = "<group>"; };
+		E53667446F5957C29A62D82CF32634FE /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
+		F497662B67B716833BECF30A1E9E1EB7 /* Pods-PrideMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PrideMap.modulemap"; sourceTree = "<group>"; };
+		F4C724A2DB38AAC7FCC0FACCB949709B /* Pods-PrideMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrideMap-umbrella.h"; sourceTree = "<group>"; };
+		F942840A06BDC155E3EB98D7ED802269 /* Pods-PrideMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrideMap.release.xcconfig"; sourceTree = "<group>"; };
+		F958F18388162B531CBFFB71002A491F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BF74612D31DC0ECCFC24A855E41D60 /* Cheers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cheers.xcconfig; sourceTree = "<group>"; };
+		FD34545B0505CBEEF2079BEBB5C37DC5 /* RazzleDazzle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RazzleDazzle-umbrella.h"; sourceTree = "<group>"; };
+		FEC90E95B404C70EAC7E3102D1CC678F /* UIView+Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Transform.swift"; path = "Source/UIView+Transform.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03234DA9985613623605807192D039B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697AD3FAAD311F2472460937A12575D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8292F9E13A01C5FCCDDDDB7DD0F2F9D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BC25C86C1643F53CF2524F84EDB2FF /* Foundation.framework in Frameworks */,
+				F495515B301B62842EBF5CC6D9D1A6FD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD7AA92FB3F44F8B0132A9FF77E7460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B13EE721B4782D21E92E3D63D51BDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4689480429FBA5014262C3D6AAF2E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				782F04147478FE11B9F02167FA69CCE9 /* Info.plist */,
+				475B46A47F0CFCA01892CCF32BA4DD77 /* RazzleDazzle.modulemap */,
+				63879894D2D0C844851ABFDDB09BE829 /* RazzleDazzle.xcconfig */,
+				42531A1F9ACE14AC4247E9C5A25FEEB1 /* RazzleDazzle-dummy.m */,
+				96631DE7184EA35E297F3740742F25A8 /* RazzleDazzle-prefix.pch */,
+				FD34545B0505CBEEF2079BEBB5C37DC5 /* RazzleDazzle-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RazzleDazzle";
+			sourceTree = "<group>";
+		};
+		405DF60F1C43A62CB8E4C9C4CD8B3FF9 /* Cheers */ = {
+			isa = PBXGroup;
+			children = (
+				338DE55DD6AE81143CF631DBD7CF21E7 /* Cheers.swift */,
+				AA87AE44C78E751053920292CE101511 /* Config.swift */,
+				E53667446F5957C29A62D82CF32634FE /* Extensions.swift */,
+				02C336A5E7B9149A55DB2D363628C0CF /* ImageGenerator.swift */,
+				CE40167948C112484A2B5296B13AF79B /* Support Files */,
+			);
+			name = Cheers;
+			path = Cheers;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53592D3BDF502667DEAC69C3C3F87433 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				405DF60F1C43A62CB8E4C9C4CD8B3FF9 /* Cheers */,
+				AD42888E3FE740706D405A063DC452C8 /* RazzleDazzle */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E68DFFA28766F76DDDEB4E9FD93721F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B5512609689F3CCD5B6054282E3785F /* Cheers.framework */,
+				167AB8BBBBF2F1D31F3EEF4EEF5BDA4B /* Pods_PrideMap.framework */,
+				A35A4A85D53166678C1A2A8FE0E9A78E /* RazzleDazzle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				53592D3BDF502667DEAC69C3C3F87433 /* Pods */,
+				6E68DFFA28766F76DDDEB4E9FD93721F /* Products */,
+				F01A66CC81BA503B0F75827F3E8AB828 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		99C92C38B63BAE359EC73AE9EC5D05E9 /* Pods-PrideMap */ = {
+			isa = PBXGroup;
+			children = (
+				F958F18388162B531CBFFB71002A491F /* Info.plist */,
+				F497662B67B716833BECF30A1E9E1EB7 /* Pods-PrideMap.modulemap */,
+				C260759DD6788E722D29F7B67375FF71 /* Pods-PrideMap-acknowledgements.markdown */,
+				693816D40D66FFCF87CCCD62CB9722FC /* Pods-PrideMap-acknowledgements.plist */,
+				9A8DEA1CD38564C128C2C8E4B4B710F3 /* Pods-PrideMap-dummy.m */,
+				7EEC2C5A9D46DC7EF93C4537A459C149 /* Pods-PrideMap-frameworks.sh */,
+				E3C50B6B54267E1B2B18F9710410BCB9 /* Pods-PrideMap-resources.sh */,
+				F4C724A2DB38AAC7FCC0FACCB949709B /* Pods-PrideMap-umbrella.h */,
+				8C15955E4F6318032C0D5316076162D6 /* Pods-PrideMap.debug.xcconfig */,
+				F942840A06BDC155E3EB98D7ED802269 /* Pods-PrideMap.release.xcconfig */,
+			);
+			name = "Pods-PrideMap";
+			path = "Target Support Files/Pods-PrideMap";
+			sourceTree = "<group>";
+		};
+		AD42888E3FE740706D405A063DC452C8 /* RazzleDazzle */ = {
+			isa = PBXGroup;
+			children = (
+				9E7B1491E883DB28AF3705DEE3666475 /* AlphaAnimation.swift */,
+				3D390E4D9ADC5C0C9CC5696A06610746 /* Animatable.swift */,
+				114E6A5931455CAD1FFF02D705E5B063 /* AnimatedPagingScrollViewController.swift */,
+				4F12C9E586928E529D4D417FBA05C47B /* Animation.swift */,
+				3DE59077F0C9EDE46196D4710B2F1399 /* Animator.swift */,
+				C7903EE9C0B08884788FCEA15F68C24A /* BackgroundColorAnimation.swift */,
+				905305A4D1D70A13BADE3187E5427EA0 /* ConstraintConstantAnimation.swift */,
+				6C292B56BBD4A442DBE6B622C2F68E03 /* ConstraintMultiplierAnimation.swift */,
+				6D19453FB2D07D195C49B52167549C5E /* CornerRadiusAnimation.swift */,
+				21E499FE436E04CE4B12CCF51A508BA3 /* CubicBezier.swift */,
+				4594F027C65614BBEB23E8BD85074537 /* EasingFunction.swift */,
+				3ECE1312D976837C8E7D9A7D38DC3013 /* Filmstrip.swift */,
+				020612C166166AF04909DA6155441CA6 /* HideAnimation.swift */,
+				AE6E57F3C9C28138DDE8849138657E4B /* Interpolatable.swift */,
+				77C1532198E67408D3F35B212E20F9C0 /* LabelTextColorAnimation.swift */,
+				A473F9BB6F35C54866528CCEACDD616A /* LayerFillColorAnimation.swift */,
+				008DCF2743CE54006B64553705B436DD /* LayerStrokeColorAnimation.swift */,
+				42E90346D24416E38B66ABA2D30E02B8 /* LayerStrokeEndAnimation.swift */,
+				AB38EDDC9EF3EAB4A9D4ECF8303C6F6B /* LayerStrokeStartAnimation.swift */,
+				8C1BB77EECEF6ECF41B4B52D31ABA7F9 /* PathPositionAnimation.swift */,
+				6106CBAB56F8D4813B5519EC38434A0D /* RazzleDazzle.h */,
+				8F0D3E410CB75739C5EB7A4E9F772735 /* RotationAnimation.swift */,
+				201F5A0877C8D47A8333F96157909C42 /* ScaleAnimation.swift */,
+				C1FB20C79B60314817019253DC8FE1BA /* ScrollViewPageConstraintAnimation.swift */,
+				A20839AB93D1DE1BDB511CC3AC3B5531 /* TranslationAnimation.swift */,
+				FEC90E95B404C70EAC7E3102D1CC678F /* UIView+Transform.swift */,
+				3B4689480429FBA5014262C3D6AAF2E7 /* Support Files */,
+			);
+			name = RazzleDazzle;
+			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
+		CE40167948C112484A2B5296B13AF79B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2586C31970C6FCDA27D54A3D252BAD06 /* Cheers.modulemap */,
+				F9BF74612D31DC0ECCFC24A855E41D60 /* Cheers.xcconfig */,
+				14233B143FE42FC7B7760E82DA9BF368 /* Cheers-dummy.m */,
+				0D807B860D5D9834BD377EE7BF421136 /* Cheers-prefix.pch */,
+				DBB3102C08024C1A4B7676F4A0585758 /* Cheers-umbrella.h */,
+				4B5ECD80A7972604BB6098BC93F56827 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cheers";
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F01A66CC81BA503B0F75827F3E8AB828 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99C92C38B63BAE359EC73AE9EC5D05E9 /* Pods-PrideMap */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41B6B990DBAE0A03942C2C5B9BF76F15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79FC7EEA4663918349028DAE2E346B3 /* Pods-PrideMap-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		724FE8AD8DE721D022587197BC90D8B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B06AFEECFC58AA709E91AD1AF8B735A /* Cheers-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AAF36C72F78D28E267FDBAFB40FB1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BA3044FC7FA06A9085B0622DA150B9 /* RazzleDazzle-umbrella.h in Headers */,
+				50E00E7D1C2D810A6C3D8707FDC26969 /* RazzleDazzle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05DD63B8C6A69F96E067B854261948BB /* Pods-PrideMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BB00998F35076CFC67EE2464CA2AC8 /* Build configuration list for PBXNativeTarget "Pods-PrideMap" */;
+			buildPhases = (
+				F4E4B851BEA8C5C58F1D3AE5218B8C63 /* Sources */,
+				DAD7AA92FB3F44F8B0132A9FF77E7460 /* Frameworks */,
+				41B6B990DBAE0A03942C2C5B9BF76F15 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				627C50CF9AA42A604BC431B963264A75 /* PBXTargetDependency */,
+				57A5BB0B2EBFE39C5563E5673FC6D58A /* PBXTargetDependency */,
+			);
+			name = "Pods-PrideMap";
+			productName = "Pods-PrideMap";
+			productReference = 167AB8BBBBF2F1D31F3EEF4EEF5BDA4B /* Pods_PrideMap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C279FA6C6C73D2194A8215BAE29137F6 /* Cheers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB0B83140F526E1220348FD89F149497 /* Build configuration list for PBXNativeTarget "Cheers" */;
+			buildPhases = (
+				8C2147A6785212C2AAFE87E1137D9A9B /* Sources */,
+				03234DA9985613623605807192D039B3 /* Frameworks */,
+				724FE8AD8DE721D022587197BC90D8B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cheers;
+			productName = Cheers;
+			productReference = 7B5512609689F3CCD5B6054282E3785F /* Cheers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E34271A46286014B9E532BD1CE5655EB /* RazzleDazzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0598A9B6B9CBBBC833EDC45EDA90500 /* Build configuration list for PBXNativeTarget "RazzleDazzle" */;
+			buildPhases = (
+				1CFBA465BE965DC072202B16F8E9A0E2 /* Sources */,
+				8292F9E13A01C5FCCDDDDB7DD0F2F9D1 /* Frameworks */,
+				99AAF36C72F78D28E267FDBAFB40FB1C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RazzleDazzle;
+			productName = RazzleDazzle;
+			productReference = A35A4A85D53166678C1A2A8FE0E9A78E /* RazzleDazzle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6E68DFFA28766F76DDDEB4E9FD93721F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C279FA6C6C73D2194A8215BAE29137F6 /* Cheers */,
+				05DD63B8C6A69F96E067B854261948BB /* Pods-PrideMap */,
+				E34271A46286014B9E532BD1CE5655EB /* RazzleDazzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CFBA465BE965DC072202B16F8E9A0E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				599BDD28B1D7EB3002393210AA7D7EBB /* AlphaAnimation.swift in Sources */,
+				C1DEA9433739E9400086D0B81840479D /* Animatable.swift in Sources */,
+				597ACF1C06716728C4F0E808848933D6 /* AnimatedPagingScrollViewController.swift in Sources */,
+				F37A593303AA8EE111D8F50B0BA63997 /* Animation.swift in Sources */,
+				DE584B753DEA0E6BE638C1D62CB33404 /* Animator.swift in Sources */,
+				D56C5B673AFC97C11CA85832DD3D22B7 /* BackgroundColorAnimation.swift in Sources */,
+				CD1116CD0B5E7C5D07970708915FEA49 /* ConstraintConstantAnimation.swift in Sources */,
+				A6B5AC728DA2D9BABE57F7D3B3FA940D /* ConstraintMultiplierAnimation.swift in Sources */,
+				E41A6E53A6CB29E47FAC6BAA557FA90A /* CornerRadiusAnimation.swift in Sources */,
+				256001F970099651F2E929E8E3D6622C /* CubicBezier.swift in Sources */,
+				600F5F1777159EC2E185DC0EB3EC9546 /* EasingFunction.swift in Sources */,
+				1E501FF631930FE3DC7997FAB99F9AA1 /* Filmstrip.swift in Sources */,
+				EA1B211C40F649181F944B792EBF1F35 /* HideAnimation.swift in Sources */,
+				63A0AEC411E5C0547EDF072AD3BE75D1 /* Interpolatable.swift in Sources */,
+				6ACCA660F948B548BB71581823857E2E /* LabelTextColorAnimation.swift in Sources */,
+				CEC3FC882017AF8A02D40B0DD35643FE /* LayerFillColorAnimation.swift in Sources */,
+				E0E65ABC2AE97CEF6FFD7764339A0519 /* LayerStrokeColorAnimation.swift in Sources */,
+				C0F9B7A07339A4D49982897555C6642F /* LayerStrokeEndAnimation.swift in Sources */,
+				EFBF110C4E2A951AD6E0CA2A03E8A5B6 /* LayerStrokeStartAnimation.swift in Sources */,
+				104120CC395EDABB9ED722FA44169296 /* PathPositionAnimation.swift in Sources */,
+				3BF9E7DB8B55531D477341D918623BCC /* RazzleDazzle-dummy.m in Sources */,
+				96A406B95E2E84263AE471BC2C3C6C51 /* RotationAnimation.swift in Sources */,
+				03FD00344607F0B7F1D3C492A43483E3 /* ScaleAnimation.swift in Sources */,
+				86CAF9D11F2B3CE2D94B502DB650D757 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				FC1D7CAC03B5A9FA443C315695382B39 /* TranslationAnimation.swift in Sources */,
+				405DFB5D2F126B04402ED6AEC6D9C7CB /* UIView+Transform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C2147A6785212C2AAFE87E1137D9A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				172E1457C0A629E879E11CD9E64E5574 /* Cheers-dummy.m in Sources */,
+				3E5206FD1B04CE52AD9F7D7462937D3D /* Cheers.swift in Sources */,
+				42A09E94875F3030EB20AFB327A4BC1B /* Config.swift in Sources */,
+				DCFE0CF7B7F7C806339EE3CE9462AB55 /* Extensions.swift in Sources */,
+				372DE693B2CFCF8A89B005590434979A /* ImageGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E4B851BEA8C5C58F1D3AE5218B8C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA83235E656C1963FAD442886BE9791 /* Pods-PrideMap-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57A5BB0B2EBFE39C5563E5673FC6D58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RazzleDazzle;
+			target = E34271A46286014B9E532BD1CE5655EB /* RazzleDazzle */;
+			targetProxy = 928B2A41819E2250F3B2BCF6ADA3F5E6 /* PBXContainerItemProxy */;
+		};
+		627C50CF9AA42A604BC431B963264A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cheers;
+			target = C279FA6C6C73D2194A8215BAE29137F6 /* Cheers */;
+			targetProxy = A0E12733CF0A3EC405107286C757499F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3E8ADC2B93FA0E8320B2D4982F34D2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63879894D2D0C844851ABFDDB09BE829 /* RazzleDazzle.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RazzleDazzle/RazzleDazzle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RazzleDazzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RazzleDazzle/RazzleDazzle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RazzleDazzle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		486E3DBAA470776A5D218AD32C0AEE08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63879894D2D0C844851ABFDDB09BE829 /* RazzleDazzle.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RazzleDazzle/RazzleDazzle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RazzleDazzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RazzleDazzle/RazzleDazzle.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RazzleDazzle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B1A69371A76A699F97F4380ADC007EA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C15955E4F6318032C0D5316076162D6 /* Pods-PrideMap.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PrideMap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PrideMap/Pods-PrideMap.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PrideMap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D49D776C9F0792CC23684EB3CE75FA55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BF74612D31DC0ECCFC24A855E41D60 /* Cheers.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cheers/Cheers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cheers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cheers/Cheers.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cheers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCA707A180CDE130FA9B707D20D59A3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F942840A06BDC155E3EB98D7ED802269 /* Pods-PrideMap.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PrideMap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PrideMap/Pods-PrideMap.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PrideMap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9C04E47B5429F142747DD1FE5A0B436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BF74612D31DC0ECCFC24A855E41D60 /* Cheers.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cheers/Cheers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cheers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cheers/Cheers.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cheers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB0B83140F526E1220348FD89F149497 /* Build configuration list for PBXNativeTarget "Cheers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49D776C9F0792CC23684EB3CE75FA55 /* Debug */,
+				F9C04E47B5429F142747DD1FE5A0B436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BB00998F35076CFC67EE2464CA2AC8 /* Build configuration list for PBXNativeTarget "Pods-PrideMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1A69371A76A699F97F4380ADC007EA2 /* Debug */,
+				DCA707A180CDE130FA9B707D20D59A3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0598A9B6B9CBBBC833EDC45EDA90500 /* Build configuration list for PBXNativeTarget "RazzleDazzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				486E3DBAA470776A5D218AD32C0AEE08 /* Debug */,
+				3E8ADC2B93FA0E8320B2D4982F34D2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

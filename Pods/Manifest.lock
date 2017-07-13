@@ -1,0 +1,24 @@
+PODS:
+  - Cheers (1.1.0)
+  - RazzleDazzle (0.1.5)
+
+DEPENDENCIES:
+  - Cheers (from `https://github.com/hyperoslo/Cheers.git`)
+  - RazzleDazzle
+
+EXTERNAL SOURCES:
+  Cheers:
+    :git: https://github.com/hyperoslo/Cheers.git
+
+CHECKOUT OPTIONS:
+  Cheers:
+    :commit: 3b0226ae4bee166ec8231774e5dfeecc86582a87
+    :git: https://github.com/hyperoslo/Cheers.git
+
+SPEC CHECKSUMS:
+  Cheers: 8ee14e1ae7ef874a4b5bc33b71d0c3539a0bfb93
+  RazzleDazzle: 0b1b9fc8ceed04bfdd4b3e8182e98ef7edacd1d1
+
+PODFILE CHECKSUM: 541cf3829a1ab4ca8ff69197685b877b8a13ad07
+
+COCOAPODS: 1.2.0
