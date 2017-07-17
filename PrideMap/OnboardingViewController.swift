@@ -132,7 +132,7 @@ extension OnboardingViewController: CLLocationManagerDelegate{
     
     private func addWelcomeLabel(){
         let label = UILabel()
-        label.text = "Välkommen till PrideMap"
+        label.text = NSLocalizedString("welcome_label", comment: "Welcome Label")
         label.numberOfLines = 2
         label.font = UIFont.preferredFont(forTextStyle: .headline).withSize(30)
         label.adjustsFontSizeToFitWidth = true
@@ -197,7 +197,7 @@ extension OnboardingViewController: CLLocationManagerDelegate{
         self.locationButton = button
         button.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 1, alpha: 1)
         button.layer.cornerRadius = 8
-        button.setTitle(NSLocalizedString("Permit location access", comment: "Access location string"), for: .normal)
+        button.setTitle(NSLocalizedString("location_permission", comment: "Access location string"), for: .normal)
         button.addTarget(self, action: #selector(self.permitLocationAccess(sender:)), for: .touchUpInside)
         self.contentView.addSubview(button)
         let bottom = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -80)
@@ -234,7 +234,7 @@ extension OnboardingViewController: CLLocationManagerDelegate{
         }
         self.locationManager.stopUpdatingLocation()
         self.locationButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
-        self.locationButton.setTitle("Slide next ->", for: .normal)
+        self.locationButton.setTitle(NSLocalizedString("swipe_label", comment: "Swipe label"), for: .normal)
         
     }
     
@@ -305,7 +305,7 @@ extension OnboardingViewController{
     
     private func addNotificationView(){
         if let notificationView = UINib.init(nibName: "NotificationView", bundle: nil).instantiate(withOwner: self)[0] as? NotificationView {
-            notificationView.messageLabel.text = "The parade starts in 5 minutes, get ready! ❤️💛💚💙💜"
+            notificationView.messageLabel.text = NSLocalizedString("parade_notification", comment: "Onboarding parade notification")
             self.contentView.addSubview(notificationView)
             let widthC1 = NSLayoutConstraint(item: notificationView, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1, constant: 0)
             widthC1.isActive = true
@@ -328,12 +328,12 @@ extension OnboardingViewController{
         self.pushButton = button
         button.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 1, alpha: 1)
         button.layer.cornerRadius = 8
-        button.setTitle(NSLocalizedString("Permit push messages", comment: "Access push string"), for: .normal)
+        button.setTitle(NSLocalizedString("permit_push", comment: "Access push string"), for: .normal)
         button.addTarget(self, action: #selector(self.permitPushAccess(sender:)), for: .touchUpInside)
         self.contentView.addSubview(button)
         let bottom = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -80)
         bottom.isActive = true
-        let widthC = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 220)
+        let widthC = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 244)
         widthC.isActive = true
         NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60).isActive = true
         keepView(button, onPages: [0.5,1,1.5])
@@ -347,10 +347,10 @@ extension OnboardingViewController{
     
     func permitPushAccess(sender: UIButton){
         PushHelper.registerForPushNotifications(success: {
-            self.pushButton.setTitle("Slide next ->", for: .normal)
+            self.pushButton.setTitle(NSLocalizedString("swipe_label", comment: "Swipe label"), for: .normal)
             self.pushButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
         }) {
-            self.pushButton.setTitle("Slide next ->", for: .normal)
+            self.pushButton.setTitle(NSLocalizedString("swipe_label", comment: "Swipe label"), for: .normal)
             self.pushButton.backgroundColor = #colorLiteral(red: 0.8941176471, green: 0.01176470588, blue: 0.01176470588, alpha: 1)
         }
     }
@@ -365,7 +365,7 @@ extension OnboardingViewController{
     private func addContinueButton(){
         continueButton = UIButton()
         continueButton.tintColor = UIColor.black
-        continueButton.setTitle(NSLocalizedString("Fortsätt", comment: "Continue string"), for: .normal)
+        continueButton.setTitle(NSLocalizedString("Continue", comment: "Continue string"), for: .normal)
         if shouldEnableContinueAtStart{
             continueButton.isEnabled = true
             continueButton.setTitleColor(UIColor.black, for: .normal)

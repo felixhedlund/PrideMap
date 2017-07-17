@@ -1,0 +1,14 @@
+/* 
+  Localization.strings
+  PrideMap
+
+  Created by Felix Hedlund on 2017-07-17.
+  Copyright © 2017 Felix Hedlund. All rights reserved.
+*/
+
+"welcome_label" = "Välkommen till PrideMap";
+"location_permission" = "Tillåt platsinfo";
+"swipe_label" = "Swipa ->";
+"parade_notification" = "Paraden startar om 5 minuter, tagga till! ❤️💛💚💙💜";
+"permit_push" = "Tillåt push-meddelanden";
+"Continue" = "Fortsätt";
