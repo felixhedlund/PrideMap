@@ -28,6 +28,7 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     var circleMap: CircleMap?
     var locationManager: CLLocationManager!
     var locationButton: UIButton!
+    var pushButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,7 +48,7 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     
     override func numberOfPages() -> Int {
         // Tell the scroll view how many pages it has
-        return 4
+        return 3
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,7 +111,7 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
         self.contentView.addSubview(pageControl)
         let bottom = NSLayoutConstraint(item: pageControl, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -24)
         bottom.isActive = true
-        keepView(pageControl, onPages: [0,1,2,3])
+        keepView(pageControl, onPages: [0,1,2])
         
         let animation = ConstraintConstantAnimation(superview: pageControl, constraint: bottom)
         animation[0] = -24
@@ -233,6 +234,7 @@ extension OnboardingViewController: CLLocationManagerDelegate{
         }
         self.locationManager.stopUpdatingLocation()
         self.locationButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
+        self.locationButton.setTitle("Slide next ->", for: .normal)
         
     }
     
@@ -248,13 +250,13 @@ extension OnboardingViewController: CLLocationManagerDelegate{
             let widthC = NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 0.25, constant: 0)
             widthC.isActive = true
             NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: circleView, attribute: .height, multiplier: 1, constant: 0).isActive = true
-            keepView(circleView, onPages: [3, 3.5])
+            keepView(circleView, onPages: [2, 2.5])
             
             let animate = ConstraintMultiplierAnimation(superview: scrollView, constraint: widthC, attribute: .width, referenceView: circleView)
             animate[0] = 0.25
             animate[1] = 0.5
-            animate[2] = 0.75
-            animate[3] = 1
+            animate[2] = 1
+            animate[2.5] = 0.5
             animator.addAnimation(animate)
             
             
@@ -263,8 +265,8 @@ extension OnboardingViewController: CLLocationManagerDelegate{
             let animate2 = AlphaAnimation(view: circleView)
             animate2[0] = 0.25
             animate2[1] = 0.5
-            animate2[2] = 0.75
-            animate2[3] = 1
+            animate2[2] = 1
+            animate2[2.5] = 0.5
             animator.addAnimation(animate2)
             
             
@@ -298,6 +300,7 @@ extension OnboardingViewController: CLLocationManagerDelegate{
 extension OnboardingViewController{
     func addSecondPageContent(){
         addNotificationView()
+        addNotificationButton()
     }
     
     private func addNotificationView(){
@@ -320,15 +323,42 @@ extension OnboardingViewController{
         }
     }
     
+    private func addNotificationButton(){
+        let button = UIButton()
+        self.pushButton = button
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 8
+        button.setTitle(NSLocalizedString("Permit push messages", comment: "Access push string"), for: .normal)
+        button.addTarget(self, action: #selector(self.permitPushAccess(sender:)), for: .touchUpInside)
+        self.contentView.addSubview(button)
+        let bottom = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -80)
+        bottom.isActive = true
+        let widthC = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 220)
+        widthC.isActive = true
+        NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60).isActive = true
+        keepView(button, onPages: [0.5,1,1.5])
+        let animate = ConstraintConstantAnimation(superview: button, constraint: bottom)
+        animate[0.5] = self.view.frame.height/2
+        animate[1] = -80
+        animate[1.5] = self.view.frame.height/2
+        self.animator.addAnimation(animate)
+        
+    }
+    
+    func permitPushAccess(sender: UIButton){
+        PushHelper.registerForPushNotifications(success: {
+            self.pushButton.setTitle("Slide next ->", for: .normal)
+            self.pushButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
+        }) {
+            self.pushButton.setTitle("Slide next ->", for: .normal)
+            self.pushButton.backgroundColor = #colorLiteral(red: 0.8941176471, green: 0.01176470588, blue: 0.01176470588, alpha: 1)
+        }
+    }
+    
 }
 
 extension OnboardingViewController{
     func addThirdPageContent(){
-    }
-}
-
-extension OnboardingViewController: UITextFieldDelegate{
-    func addFourthPageContent(){
         addContinueButton()
     }
     
@@ -351,11 +381,11 @@ extension OnboardingViewController: UITextFieldDelegate{
         contentView.addSubview(continueButton)
         
         NSLayoutConstraint(item: continueButton, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 16).isActive = true
-        keepView(continueButton, onPages: [3])
+        keepView(continueButton, onPages: [2])
         let animate = AlphaAnimation(view: continueButton)
+        animate[1.5] = 0
+        animate[2] = 1
         animate[2.5] = 0
-        animate[3] = 1
-        animate[3.5] = 0
         self.animator.addAnimation(animate)
         
         
@@ -365,6 +395,14 @@ extension OnboardingViewController: UITextFieldDelegate{
     func didPressContinue(sender: UIButton){
         self.performSegue(withIdentifier: "Map", sender: self)
     }
+}
+
+extension OnboardingViewController: UITextFieldDelegate{
+    func addFourthPageContent(){
+        
+    }
+    
+    
 
 }
 
