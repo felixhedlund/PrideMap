@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NotificationView" customModule="PrideMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj0-31-kLo">
+                    <rect key="frame" x="16" y="16" width="343" height="80.5"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lhM-vk-LCs">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="80.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnc-Nz-R2C">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIDEMAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQY-p9-K7z">
+                                        <rect key="frame" x="36" y="7" width="81.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="M04-lS-AdD"/>
+                                    <constraint firstItem="qQY-p9-K7z" firstAttribute="centerY" secondItem="Xnc-Nz-R2C" secondAttribute="centerY" id="XvS-S7-ACX"/>
+                                    <constraint firstItem="qQY-p9-K7z" firstAttribute="leading" secondItem="Xnc-Nz-R2C" secondAttribute="leading" constant="36" id="tK2-Aj-gtg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Xnc-Nz-R2C" firstAttribute="width" secondItem="lhM-vk-LCs" secondAttribute="width" id="t90-24-657"/>
+                            <constraint firstItem="Xnc-Nz-R2C" firstAttribute="centerX" secondItem="lhM-vk-LCs" secondAttribute="centerX" id="vsV-jQ-nxG"/>
+                            <constraint firstItem="Xnc-Nz-R2C" firstAttribute="top" secondItem="lhM-vk-LCs" secondAttribute="top" id="wZV-yG-HwM"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv2-sY-jFv">
+                    <rect key="frame" x="32" y="68" width="42" height="12.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Xv2-sY-jFv" firstAttribute="top" secondItem="Xnc-Nz-R2C" secondAttribute="bottom" constant="16" id="CuW-9N-OnI"/>
+                <constraint firstItem="Uj0-31-kLo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="D3l-rI-VVe"/>
+                <constraint firstAttribute="bottom" secondItem="Uj0-31-kLo" secondAttribute="bottom" constant="16" id="E6w-Yh-LKV"/>
+                <constraint firstItem="Uj0-31-kLo" firstAttribute="bottom" secondItem="Xv2-sY-jFv" secondAttribute="bottom" constant="16" id="IBn-TG-x41"/>
+                <constraint firstItem="Xv2-sY-jFv" firstAttribute="leading" secondItem="Uj0-31-kLo" secondAttribute="leading" constant="16" id="QGk-cX-edb"/>
+                <constraint firstAttribute="trailing" secondItem="Uj0-31-kLo" secondAttribute="trailing" constant="16" id="fPZ-J2-cfa"/>
+                <constraint firstItem="Uj0-31-kLo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="sb0-Jj-UyW"/>
+                <constraint firstItem="Xv2-sY-jFv" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Uj0-31-kLo" secondAttribute="trailing" constant="-16" id="um5-E2-xfN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="Xv2-sY-jFv" id="fi5-SO-rTq"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="11"/>
+        </view>
+    </objects>
+</document>

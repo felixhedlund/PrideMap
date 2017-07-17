@@ -11,6 +11,8 @@
 		F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */; };
 		F73314171F1CEE630002BE60 /* CircleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73314161F1CEE630002BE60 /* CircleMap.swift */; };
 		F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73314181F1CEE6E0002BE60 /* CircleMap.xib */; };
+		F733141B1F1D09420002BE60 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F733141A1F1D09420002BE60 /* NotificationView.xib */; };
+		F733141D1F1D0A920002BE60 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733141C1F1D0A920002BE60 /* NotificationView.swift */; };
 		F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */; };
 		F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */; };
 		F772E24E1F17F46A00264DD8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24D1F17F46A00264DD8 /* CircleView.swift */; };
@@ -29,6 +31,8 @@
 		F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConstants.swift; sourceTree = "<group>"; };
 		F73314161F1CEE630002BE60 /* CircleMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMap.swift; sourceTree = "<group>"; };
 		F73314181F1CEE6E0002BE60 /* CircleMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleMap.xib; sourceTree = "<group>"; };
+		F733141A1F1D09420002BE60 /* NotificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
+		F733141C1F1D0A920002BE60 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
 		F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F772E24D1F17F46A00264DD8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				F772E24D1F17F46A00264DD8 /* CircleView.swift */,
 				F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */,
 				F73314161F1CEE630002BE60 /* CircleMap.swift */,
+				F733141C1F1D0A920002BE60 /* NotificationView.swift */,
+				F733141A1F1D09420002BE60 /* NotificationView.xib */,
 				F73314181F1CEE6E0002BE60 /* CircleMap.xib */,
 				F772E24F1F17FA4500264DD8 /* CircleView.xib */,
 				F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */,
@@ -184,6 +190,7 @@
 				F77F1E831F17A3F5001DD7E5 /* LaunchScreen.storyboard in Resources */,
 				F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */,
 				F77F1E801F17A3F5001DD7E5 /* Assets.xcassets in Resources */,
+				F733141B1F1D09420002BE60 /* NotificationView.xib in Resources */,
 				F77F1E7E1F17A3F5001DD7E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +258,7 @@
 				F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */,
 				F77F1E8D1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift in Sources */,
 				F77F1E8B1F17A480001DD7E5 /* MapViewController.swift in Sources */,
+				F733141D1F1D0A920002BE60 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

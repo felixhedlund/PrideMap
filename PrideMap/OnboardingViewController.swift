@@ -10,6 +10,7 @@ import UIKit
 import Cheers
 import RazzleDazzle
 import IBAnimatable
+import MapKit
 class OnboardingViewController: AnimatedPagingScrollViewController {
     fileprivate var pageControl: UIPageControl!
     fileprivate var welcomeLabel: UILabel!
@@ -25,6 +26,8 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     var circleView: CircleView?
     
     var circleMap: CircleMap?
+    var locationManager: CLLocationManager!
+    var locationButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -118,24 +121,25 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     
 }
 
-extension OnboardingViewController{
+extension OnboardingViewController: CLLocationManagerDelegate{
     func addFirstViewContent(){
         addWelcomeLabel()
         addCheers()
         addCircleMap()
+        addLocationButton()
     }
     
     private func addWelcomeLabel(){
         let label = UILabel()
-        label.text = "Välkommen till PrajdMap"
+        label.text = "Välkommen till PrideMap"
         label.numberOfLines = 2
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.preferredFont(forTextStyle: .headline).withSize(30)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.textAlignment = .center
         self.welcomeLabel = label
         self.contentView.addSubview(label)
-        NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 24).isActive = true
+        NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 28).isActive = true
         NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1, constant: -48).isActive = true
         keepView(label, onPages: [0])
         
@@ -186,6 +190,53 @@ extension OnboardingViewController{
         
         
     }
+    
+    private func addLocationButton(){
+        let button = UIButton()
+        self.locationButton = button
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 8
+        button.setTitle(NSLocalizedString("Permit location access", comment: "Access location string"), for: .normal)
+        button.addTarget(self, action: #selector(self.permitLocationAccess(sender:)), for: .touchUpInside)
+        self.contentView.addSubview(button)
+        let bottom = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: scrollView, attribute: .bottom, multiplier: 1, constant: -80)
+        bottom.isActive = true
+        let widthC = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 220)
+        widthC.isActive = true
+        NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60).isActive = true
+        keepView(button, onPages: [-0.5,0,0.5])
+        let animate = ConstraintConstantAnimation(superview: button, constraint: bottom)
+        animate[-0.5] = self.view.frame.height/2
+        animate[0] = -80
+        animate[0.5] = self.view.frame.height/2
+        self.animator.addAnimation(animate)
+        
+    }
+    
+    func permitLocationAccess(sender: UIButton){
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Check for Location Services
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.circleMap?.mapView.showsUserLocation = true
+        if let coordinate = locations.last?.coordinate{
+            self.circleMap?.mapView.centerCoordinate = coordinate
+        }
+        self.locationManager.stopUpdatingLocation()
+        self.locationButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
+        
+    }
+    
+    
     
     private func addCheers(){
         if let circleView = UINib.init(nibName: "CircleView", bundle: nil).instantiate(withOwner: self)[0] as? CircleView {
@@ -246,7 +297,27 @@ extension OnboardingViewController{
 
 extension OnboardingViewController{
     func addSecondPageContent(){
-        
+        addNotificationView()
+    }
+    
+    private func addNotificationView(){
+        if let notificationView = UINib.init(nibName: "NotificationView", bundle: nil).instantiate(withOwner: self)[0] as? NotificationView {
+            notificationView.messageLabel.text = "The parade starts in 5 minutes, get ready! ❤️💛💚💙💜"
+            self.contentView.addSubview(notificationView)
+            let widthC1 = NSLayoutConstraint(item: notificationView, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 1, constant: 0)
+            widthC1.isActive = true
+            let topC = NSLayoutConstraint(item: notificationView, attribute: .top, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 0)
+            topC.isActive = true
+            keepView(notificationView, onPages: [0.5,1,1.5])
+            
+            let animate = ConstraintConstantAnimation(superview: contentView, constraint: topC)
+            animate[0.5] = -self.view.frame.height/2
+            animate[1] = 0
+            animate[1.5] = -self.view.frame.height/2
+            animator.addAnimation(animate)
+            
+            
+        }
     }
     
 }
