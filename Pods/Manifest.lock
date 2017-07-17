@@ -1,9 +1,11 @@
 PODS:
   - Cheers (1.1.0)
+  - IBAnimatable (3.1.2)
   - RazzleDazzle (0.1.5)
 
 DEPENDENCIES:
   - Cheers (from `https://github.com/hyperoslo/Cheers.git`)
+  - IBAnimatable
   - RazzleDazzle
 
 EXTERNAL SOURCES:
@@ -17,8 +19,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Cheers: 8ee14e1ae7ef874a4b5bc33b71d0c3539a0bfb93
+  IBAnimatable: 26b74a72df9369d40faab97428477c246b9e42ba
   RazzleDazzle: 0b1b9fc8ceed04bfdd4b3e8182e98ef7edacd1d1
 
-PODFILE CHECKSUM: 541cf3829a1ab4ca8ff69197685b877b8a13ad07
+PODFILE CHECKSUM: c5a407d0becbef798381d06831459da1796d17b0
 
 COCOAPODS: 1.2.0

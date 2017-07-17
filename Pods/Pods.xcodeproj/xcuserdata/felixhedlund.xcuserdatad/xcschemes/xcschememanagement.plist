@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PrideMap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05DD63B8C6A69F96E067B854261948BB</key>
+		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>901006E3DF4416F89FDE0EDB7FB6BE20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E34271A46286014B9E532BD1CE5655EB</key>
+		<key>DBFF9BFED718211F2A87659A8B19AF6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

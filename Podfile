@@ -8,4 +8,5 @@ target 'PrideMap' do
   # Pods for PrideMap
   pod 'RazzleDazzle'
   pod 'Cheers', :git => 'https://github.com/hyperoslo/Cheers.git'
+  pod 'IBAnimatable'
 end
