@@ -9,14 +9,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Animatable Navigation Controller-->
         <scene sceneID="uXU-Mr-Rd5">
             <objects>
-                <navigationController navigationBarHidden="YES" id="tIM-1p-bV8" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="tIM-1p-bV8" customClass="AnimatableNavigationController" customModule="IBAnimatable" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OAZ-JB-pMX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="_transitionAnimationType" value="SystemCube(Right)"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="transitionDuration">
+                            <real key="value" value="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="r4R-HQ-v8x" kind="relationship" relationship="rootViewController" id="j0p-9b-jiH"/>
                     </connections>
