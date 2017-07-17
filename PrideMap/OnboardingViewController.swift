@@ -9,6 +9,7 @@
 import UIKit
 import Cheers
 import RazzleDazzle
+import IBAnimatable
 class OnboardingViewController: AnimatedPagingScrollViewController {
     fileprivate var pageControl: UIPageControl!
     fileprivate var welcomeLabel: UILabel!
@@ -22,6 +23,8 @@ class OnboardingViewController: AnimatedPagingScrollViewController {
     
     var cheerView: CheerView?
     var circleView: CircleView?
+    
+    var circleMap: CircleMap?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -119,6 +122,7 @@ extension OnboardingViewController{
     func addFirstViewContent(){
         addWelcomeLabel()
         addCheers()
+        addCircleMap()
     }
     
     private func addWelcomeLabel(){
@@ -140,6 +144,47 @@ extension OnboardingViewController{
         animate[0] = 1
         animate[0.5] = 0
         self.animator.addAnimation(animate)
+    }
+    
+    private func addCircleMap(){
+        let backgroundView = AnimatableImageView(image: UIImage(named: "prideCircle"))
+        backgroundView.maskType = .circle
+        backgroundView.alpha = 0.5
+        self.contentView.addSubview(backgroundView)
+        let centerY1 = NSLayoutConstraint(item: backgroundView, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 0)
+        centerY1.isActive = true
+        let widthC1 = NSLayoutConstraint(item: backgroundView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 256)
+        widthC1.isActive = true
+        NSLayoutConstraint(item: backgroundView, attribute: .width, relatedBy: .equal, toItem: backgroundView, attribute: .height, multiplier: 1, constant: 0).isActive = true
+        keepView(backgroundView, onPages: [-0.5,0,0.5])
+        let animate = AlphaAnimation(view: backgroundView)
+        animate[-0.5] = 0
+        animate[0] = 0.5
+        animate[0.5] = 0
+        self.animator.addAnimation(animate)
+        
+        
+        
+        
+        if let circleMap = UINib.init(nibName: "CircleMap", bundle: nil).instantiate(withOwner: self)[0] as? CircleMap {
+            self.circleMap = circleMap
+            self.contentView.addSubview(circleMap)
+            let centerC = NSLayoutConstraint(item: circleMap, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 0)
+            centerC.isActive = true
+            let widthC = NSLayoutConstraint(item: circleMap, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 188)
+            widthC.isActive = true
+            NSLayoutConstraint(item: circleMap, attribute: .width, relatedBy: .equal, toItem: circleMap, attribute: .height, multiplier: 1, constant: 0).isActive = true
+            keepView(circleMap, onPages: [-0.5,0,0.5])
+            let animate = AlphaAnimation(view: circleMap)
+            animate[-0.5] = 0
+            animate[0] = 1
+            animate[0.5] = 0
+            self.animator.addAnimation(animate)
+        }
+        
+        
+        
+        
     }
     
     private func addCheers(){

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB4B7988058D688AA85EAE97 /* Pods_PrideMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */; };
 		F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */; };
+		F73314171F1CEE630002BE60 /* CircleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73314161F1CEE630002BE60 /* CircleMap.swift */; };
+		F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73314181F1CEE6E0002BE60 /* CircleMap.xib */; };
 		F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */; };
 		F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */; };
 		F772E24E1F17F46A00264DD8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F772E24D1F17F46A00264DD8 /* CircleView.swift */; };
@@ -25,6 +27,8 @@
 		E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.release.xcconfig"; sourceTree = "<group>"; };
 		F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConstants.swift; sourceTree = "<group>"; };
+		F73314161F1CEE630002BE60 /* CircleMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMap.swift; sourceTree = "<group>"; };
+		F73314181F1CEE6E0002BE60 /* CircleMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleMap.xib; sourceTree = "<group>"; };
 		F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
 		F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F772E24D1F17F46A00264DD8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */,
 				F772E24D1F17F46A00264DD8 /* CircleView.swift */,
 				F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */,
+				F73314161F1CEE630002BE60 /* CircleMap.swift */,
+				F73314181F1CEE6E0002BE60 /* CircleMap.xib */,
 				F772E24F1F17FA4500264DD8 /* CircleView.xib */,
 				F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */,
 				F77F1E811F17A3F5001DD7E5 /* LaunchScreen.storyboard */,
@@ -176,6 +182,7 @@
 			files = (
 				F772E2501F17FA4500264DD8 /* CircleView.xib in Resources */,
 				F77F1E831F17A3F5001DD7E5 /* LaunchScreen.storyboard in Resources */,
+				F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */,
 				F77F1E801F17A3F5001DD7E5 /* Assets.xcassets in Resources */,
 				F77F1E7E1F17A3F5001DD7E5 /* Main.storyboard in Resources */,
 			);
@@ -238,6 +245,7 @@
 			files = (
 				F772E24E1F17F46A00264DD8 /* CircleView.swift in Sources */,
 				F77F1E791F17A3F5001DD7E5 /* AppDelegate.swift in Sources */,
+				F73314171F1CEE630002BE60 /* CircleMap.swift in Sources */,
 				F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */,
 				F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */,
 				F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */,
