@@ -75,7 +75,7 @@ class PrideCalendar{
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "sv")
         let timeZone = TimeZone(identifier: "Europe/Stockholm")
-        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 7, day: 18, hour: 17, minute: 0, second: 0, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
+        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 8, day: 5, hour: 17, minute: 0, second: 0, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
         let date = calendar.date(from: components)
         if let date = date{
             finishDate = date
