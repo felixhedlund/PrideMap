@@ -26,3 +26,8 @@
 "seconds" = "seconds";
 "parade_started_string" = "The parade has started!! ❤️💛💚💙💜";
 "parade_finished_string" = "The parade is now over, see you again next year! ❤️";
+"parade_finish_10_min_string" = "Only 10 minutes left of the parade now!";
+"parade_started_10_min_left_string" = "The parade starts in 10 minutes!";
+"parade_starts_1_day_string" = "Only one more day until the parade in Stockholm! ❤️💛💚💙💜";
+"parade_starts_2_day_string" = "Two days left until the Pride parade!";
+"parade_starts_1_week_string" = "In exactly one week the parade in Stockholm will take off! ❤️💛💚💙💜";

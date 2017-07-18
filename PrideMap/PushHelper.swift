@@ -10,13 +10,16 @@ import UserNotifications
 import CloudKit
 class PushHelper: NSObject, UNUserNotificationCenterDelegate {
     
+    static let sharedInstance = PushHelper()
+    
+    
     override init() {
         super.init()
         let center = UNUserNotificationCenter.current()
         center.delegate = self
     }
     
-    static func registerForPushNotifications(success: @escaping () -> (), failure: @escaping () -> ()){
+    func registerForPushNotifications(success: @escaping () -> (), failure: @escaping () -> ()){
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
             // Enable or disable features based on authorization
@@ -41,6 +44,23 @@ class PushHelper: NSObject, UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])
+    }
+    
+    func schedulePushNotification(components: DateComponents, message: String, identifier: String){
+        let content = UNMutableNotificationContent()
+        content.body = message
+        content.categoryIdentifier = "message"
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        
+        let request = UNNotificationRequest(
+            identifier: identifier,
+            content: content,
+            trigger: trigger
+        )
+        UNUserNotificationCenter.current().add(request) { (error) in
+            print("Added notification request: \(message)")
+            print("with error: \(error?.localizedDescription ?? "")")
+        }
     }
     
 }

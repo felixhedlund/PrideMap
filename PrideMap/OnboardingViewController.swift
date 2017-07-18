@@ -346,7 +346,7 @@ extension OnboardingViewController{
     }
     
     func permitPushAccess(sender: UIButton){
-        PushHelper.registerForPushNotifications(success: {
+        PushHelper.sharedInstance.registerForPushNotifications(success: {
             self.pushButton.setTitle(NSLocalizedString("swipe_label", comment: "Swipe label"), for: .normal)
             self.pushButton.backgroundColor = #colorLiteral(red: 0, green: 0.5019607843, blue: 0.1490196078, alpha: 1)
         }) {
