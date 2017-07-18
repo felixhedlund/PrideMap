@@ -111,18 +111,18 @@
                                 </connections>
                             </mapView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-Oc-9kq" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="32" y="24" width="311" height="53"/>
+                                <rect key="frame" x="16" y="24" width="295" height="53"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUM-W3-iN9">
-                                        <rect key="frame" x="-0.5" y="0.0" width="311" height="53"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="295" height="53"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kp1-py-2Wz">
-                                            <rect key="frame" x="0.0" y="0.0" width="311" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="53"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                         <blurEffect style="dark"/>
                                     </visualEffectView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum cookie crumbles lol lol lol lol lol" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZR-AA-aWW">
-                                        <rect key="frame" x="16" y="16" width="279" height="21"/>
+                                        <rect key="frame" x="16" y="16" width="263" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -151,8 +151,8 @@
                         <constraints>
                             <constraint firstItem="81y-at-0A5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="04f-Lf-Zp2"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2LT-kc-KEA"/>
-                            <constraint firstItem="vsi-Oc-9kq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="GCE-DA-tMC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vsi-Oc-9kq" secondAttribute="trailing" constant="16" id="KeV-BA-iwP"/>
+                            <constraint firstItem="vsi-Oc-9kq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GCE-DA-tMC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vsi-Oc-9kq" secondAttribute="trailing" constant="48" id="KeV-BA-iwP"/>
                             <constraint firstItem="vsi-Oc-9kq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="24" id="MFw-Y1-Zuc"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qzr-fJ-hDz"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="taN-zT-lGP"/>

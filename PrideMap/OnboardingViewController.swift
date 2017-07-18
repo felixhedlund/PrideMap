@@ -400,6 +400,9 @@ extension OnboardingViewController{
     }
     
     func didPressContinue(sender: UIButton){
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: TargetConstants.HasShownOnboarding)
+        
         self.performSegue(withIdentifier: "Map", sender: self)
     }
 }

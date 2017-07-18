@@ -39,7 +39,12 @@ class RoadmapViewController: UIViewController {
                 UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseIn], animations: {
                     self.sliceImage.frame = CGRect(x: self.view.frame.midX, y: self.view.frame.maxY, width: 0, height: 0)
                 }, completion: { (completed) in
-                    self.performSegue(withIdentifier: "Onboarding", sender: self.view)
+                    let userDefaults = UserDefaults.standard
+                    if userDefaults.bool(forKey: TargetConstants.HasShownOnboarding){
+                        self.performSegue(withIdentifier: "Map", sender: self.view)
+                    }else{
+                        self.performSegue(withIdentifier: "Onboarding", sender: self.view)
+                    }
                 })
             })
         }

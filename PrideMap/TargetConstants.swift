@@ -11,4 +11,5 @@ import Foundation
 struct TargetConstants{
     static let RestartAnimationWhenAppEntersForeground = "RestartAnimationWhenAppEntersForeground"
     static let ApplicationDidEnterBackground = "ApplicationDidEnterBackground"
+    static let HasShownOnboarding = "HasShownOnboarding"
 }

@@ -15,6 +15,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private var currentLocation: CLLocation?
     @IBOutlet weak var messageLabel: UILabel!
     var prideCalendar: PrideCalendar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prideCalendar = PrideCalendar(delegate: self)
@@ -79,6 +80,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         map.add(routeLine)
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
     }
 
     override func didReceiveMemoryWarning() {
