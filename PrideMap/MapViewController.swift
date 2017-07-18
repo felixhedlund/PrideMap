@@ -8,13 +8,16 @@
 
 import UIKit
 import MapKit
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, PrideCalendarDelegate {
     @IBOutlet weak var map: MKMapView!
     var routeLine: MKPolyline!
     var locationManager: CLLocationManager!
     private var currentLocation: CLLocation?
+    @IBOutlet weak var messageLabel: UILabel!
+    var prideCalendar: PrideCalendar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        prideCalendar = PrideCalendar(delegate: self)
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -136,6 +139,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //                map.setRegion(viewRegion, animated: false)
 //            }
 //        }
+    }
+    
+    func updateMessageLabel(with message: String) {
+        self.messageLabel.text = message
     }
     
     

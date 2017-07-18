@@ -12,3 +12,17 @@
 "parade_notification" = "The parade starts in 5 minutes, get ready! ❤️💛💚💙💜";
 "permit_push" = "Permit push messages";
 "Continue" = "Continue";
+
+"The parade starts in: " = "The parade starts in: ";
+"month" = "month";
+"months" = "months";
+"day" = "day";
+"days" = "days";
+"hour" = "hour";
+"hours" = "hours";
+"minute" = "minute";
+"minutes" = "minutes";
+"second" = "second";
+"seconds" = "seconds";
+"parade_started_string" = "The parade has started!! ❤️💛💚💙💜";
+"parade_finished_string" = "The parade is now over, see you again next year! ❤️";

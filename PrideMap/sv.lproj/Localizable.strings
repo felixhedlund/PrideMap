@@ -12,3 +12,17 @@
 "parade_notification" = "Paraden startar om 5 minuter, tagga till! ❤️💛💚💙💜";
 "permit_push" = "Tillåt push-meddelanden";
 "Continue" = "Fortsätt";
+
+"The parade starts in: " = "Paraden startar om: ";
+"month" = "månad";
+"months" = "månader";
+"day" = "dag";
+"days" = "dagar";
+"hour" = "timme";
+"hours" = "timmar";
+"minute" = "minut";
+"minutes" = "minuter";
+"second" = "sekund";
+"seconds" = "sekunder";
+"parade_started_string" = "Paraden har startat!! ❤️💛💚💙💜";
+"parade_finished_string" = "Paraden är nu över, vi ses igen nästa år! ❤️";

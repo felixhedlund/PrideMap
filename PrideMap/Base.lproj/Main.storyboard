@@ -4,8 +4,10 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -108,17 +110,57 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pMF-CI-BDB"/>
                                 </connections>
                             </mapView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-Oc-9kq" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="32" y="24" width="311" height="53"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUM-W3-iN9">
+                                        <rect key="frame" x="-0.5" y="0.0" width="311" height="53"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kp1-py-2Wz">
+                                            <rect key="frame" x="0.0" y="0.0" width="311" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="dark"/>
+                                    </visualEffectView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum cookie crumbles lol lol lol lol lol" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZR-AA-aWW">
+                                        <rect key="frame" x="16" y="16" width="279" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kUM-W3-iN9" firstAttribute="height" secondItem="vsi-Oc-9kq" secondAttribute="height" id="2sc-6N-6s5"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TZR-AA-aWW" secondAttribute="trailing" constant="16" id="5g9-qV-l6C"/>
+                                    <constraint firstItem="kUM-W3-iN9" firstAttribute="centerX" secondItem="vsi-Oc-9kq" secondAttribute="centerX" id="8zw-8k-WPg"/>
+                                    <constraint firstItem="TZR-AA-aWW" firstAttribute="top" secondItem="vsi-Oc-9kq" secondAttribute="top" constant="16" id="Fvm-uQ-te5"/>
+                                    <constraint firstAttribute="bottom" secondItem="TZR-AA-aWW" secondAttribute="bottom" constant="16" id="SPd-8s-WlO"/>
+                                    <constraint firstItem="TZR-AA-aWW" firstAttribute="leading" secondItem="vsi-Oc-9kq" secondAttribute="leading" constant="16" id="fkf-z6-vnj"/>
+                                    <constraint firstItem="kUM-W3-iN9" firstAttribute="width" secondItem="vsi-Oc-9kq" secondAttribute="width" id="jWW-Cw-vdp"/>
+                                    <constraint firstItem="kUM-W3-iN9" firstAttribute="centerY" secondItem="vsi-Oc-9kq" secondAttribute="centerY" id="yt6-XE-gmz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topLeft, bottomLeft, bottomRight"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="81y-at-0A5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="04f-Lf-Zp2"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2LT-kc-KEA"/>
+                            <constraint firstItem="vsi-Oc-9kq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="GCE-DA-tMC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vsi-Oc-9kq" secondAttribute="trailing" constant="16" id="KeV-BA-iwP"/>
+                            <constraint firstItem="vsi-Oc-9kq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="24" id="MFw-Y1-Zuc"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qzr-fJ-hDz"/>
                             <constraint firstItem="81y-at-0A5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="taN-zT-lGP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="map" destination="81y-at-0A5" id="oS7-fx-iJc"/>
+                        <outlet property="messageLabel" destination="TZR-AA-aWW" id="B0x-mi-4Ez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,6 +172,6 @@
         <image name="SlicePDF" width="150" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LXc-yV-shJ"/>
+        <segue reference="9UB-1V-pX8"/>
     </inferredMetricsTieBreakers>
 </document>

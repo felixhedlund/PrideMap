@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB4B7988058D688AA85EAE97 /* Pods_PrideMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */; };
+		F70794871F1DFD570053B1CD /* PrideCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70794861F1DFD570053B1CD /* PrideCalendar.swift */; };
 		F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */; };
 		F73314171F1CEE630002BE60 /* CircleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73314161F1CEE630002BE60 /* CircleMap.swift */; };
 		F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73314181F1CEE6E0002BE60 /* CircleMap.xib */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.release.xcconfig"; sourceTree = "<group>"; };
+		F70794861F1DFD570053B1CD /* PrideCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrideCalendar.swift; sourceTree = "<group>"; };
 		F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConstants.swift; sourceTree = "<group>"; };
 		F73314161F1CEE630002BE60 /* CircleMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMap.swift; sourceTree = "<group>"; };
 		F73314181F1CEE6E0002BE60 /* CircleMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleMap.xib; sourceTree = "<group>"; };
@@ -77,6 +79,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F70794831F1DFC200053B1CD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */,
+				F73314161F1CEE630002BE60 /* CircleMap.swift */,
+				F733141C1F1D0A920002BE60 /* NotificationView.swift */,
+				F772E24D1F17F46A00264DD8 /* CircleView.swift */,
+				F733141A1F1D09420002BE60 /* NotificationView.xib */,
+				F73314181F1CEE6E0002BE60 /* CircleMap.xib */,
+				F772E24F1F17FA4500264DD8 /* CircleView.xib */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		F70794841F1DFC320053B1CD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F77F1E8A1F17A480001DD7E5 /* MapViewController.swift */,
+				F77F1E8C1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift */,
+				F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		F70794851F1DFC5F0053B1CD /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */,
+				F70794861F1DFD570053B1CD /* PrideCalendar.swift */,
+				F733141E1F1D0EEE0002BE60 /* PushHelper.swift */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
 		F77F1E6C1F17A3F5001DD7E5 = {
 			isa = PBXGroup;
 			children = (
@@ -100,19 +136,10 @@
 			children = (
 				F73314201F1D10B30002BE60 /* PrideMap.entitlements */,
 				F77F1E781F17A3F5001DD7E5 /* AppDelegate.swift */,
-				F77F1E8A1F17A480001DD7E5 /* MapViewController.swift */,
-				F77F1E8C1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift */,
-				F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */,
 				F772E2491F17EEBA00264DD8 /* RoadmapViewController.swift */,
-				F733141E1F1D0EEE0002BE60 /* PushHelper.swift */,
-				F772E24B1F17EEE600264DD8 /* OnboardingViewController.swift */,
-				F772E24D1F17F46A00264DD8 /* CircleView.swift */,
-				F77F1E7C1F17A3F5001DD7E5 /* Main.storyboard */,
-				F73314161F1CEE630002BE60 /* CircleMap.swift */,
-				F733141C1F1D0A920002BE60 /* NotificationView.swift */,
-				F733141A1F1D09420002BE60 /* NotificationView.xib */,
-				F73314181F1CEE6E0002BE60 /* CircleMap.xib */,
-				F772E24F1F17FA4500264DD8 /* CircleView.xib */,
+				F70794831F1DFC200053B1CD /* Onboarding */,
+				F70794841F1DFC320053B1CD /* Main */,
+				F70794851F1DFC5F0053B1CD /* Infrastructure */,
 				F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */,
 				F77F1E811F17A3F5001DD7E5 /* LaunchScreen.storyboard */,
 				F77F1E841F17A3F5001DD7E5 /* Info.plist */,
@@ -272,6 +299,7 @@
 				F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */,
 				F772E24A1F17EEBA00264DD8 /* RoadmapViewController.swift in Sources */,
 				F772E24C1F17EEE600264DD8 /* OnboardingViewController.swift in Sources */,
+				F70794871F1DFD570053B1CD /* PrideCalendar.swift in Sources */,
 				F77F1E8D1F17A81B001DD7E5 /* JLTGradientPathRenderer.swift in Sources */,
 				F733141F1F1D0EEE0002BE60 /* PushHelper.swift in Sources */,
 				F77F1E8B1F17A480001DD7E5 /* MapViewController.swift in Sources */,
