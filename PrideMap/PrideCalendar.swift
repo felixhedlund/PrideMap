@@ -35,13 +35,13 @@ class PrideCalendar{
     private func schedulePushNotifications(){
         let calendar = Calendar(identifier: .gregorian)
         
-        let componentsStarts1Week = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24 * 60 * 7))
+        let componentsStarts1Week = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24 * 60 * 60 * 7))
         PushHelper.sharedInstance.schedulePushNotification(components: componentsStarts1Week, message: NSLocalizedString("parade_starts_1_week_string", comment: "parade_starts_1_week_string"), identifier: "prideStartsIn1Week")
         
-        let componentsStarts2Day = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24 * 60 * 2))
+        let componentsStarts2Day = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24 * 60 * 60 * 2))
         PushHelper.sharedInstance.schedulePushNotification(components: componentsStarts2Day, message: NSLocalizedString("parade_starts_2_day_string", comment: "parade_starts_2_day_string"), identifier: "prideStartsIn2Day")
         
-        let componentsStarts1Day = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24*60))
+        let componentsStarts1Day = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24*60 * 60))
         PushHelper.sharedInstance.schedulePushNotification(components: componentsStarts1Day, message: NSLocalizedString("parade_starts_1_day_string", comment: "parade_starts_1_day_string"), identifier: "prideStartsIn1Day")
         
         let componentsStarted5Min = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-5*60))
@@ -53,10 +53,6 @@ class PrideCalendar{
         let componentsStarted = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate)
         PushHelper.sharedInstance.schedulePushNotification(components: componentsStarted, message: NSLocalizedString("parade_started_string", comment: "parade_started_string"), identifier: "prideStarted")
         
-        
-        let components10MinFinished = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: finishDate.addingTimeInterval(-10*60))
-        PushHelper.sharedInstance.schedulePushNotification(components: components10MinFinished, message: NSLocalizedString("parade_finish_10_min_string", comment: "parade finished 10 min string"), identifier: "prideFinishIn10")
-        
         let componentsFinished = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: finishDate)
         PushHelper.sharedInstance.schedulePushNotification(components: componentsFinished, message: NSLocalizedString("parade_finished_string", comment: "parade finished string"), identifier: "prideFinished")
     }
@@ -66,7 +62,7 @@ class PrideCalendar{
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "sv")
         let timeZone = TimeZone(identifier: "Europe/Stockholm")
-        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 7, day: 18, hour: 15, minute: 49, second: 0, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
+        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 8, day: 5, hour: 13, minute: 0, second: 0, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
         let date = calendar.date(from: components)
         if let date = date{
             startDate = date
@@ -77,7 +73,7 @@ class PrideCalendar{
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "sv")
         let timeZone = TimeZone(identifier: "Europe/Stockholm")
-        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 7, day: 18, hour: 15, minute: 49, second: 10, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
+        let components = DateComponents(calendar: calendar, timeZone: timeZone, era: nil, year: 2017, month: 7, day: 18, hour: 17, minute: 0, second: 0, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)
         let date = calendar.date(from: components)
         if let date = date{
             finishDate = date

@@ -38,13 +38,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
 //        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
         let sourceAnnotation = MKPointAnnotation()
-        sourceAnnotation.title = "Start: Stockholm Pride Parade"
+        sourceAnnotation.title = NSLocalizedString("start_annotation", comment: "start_annotation")
         
         if let location = sourcePlacemark.location {
             sourceAnnotation.coordinate = location.coordinate
         }
         let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = "Finish: Pride park"
+        destinationAnnotation.title = NSLocalizedString("finish_annotation", comment: "finish_annotation")
         
         if let location = destinationPlacemark.location {
             destinationAnnotation.coordinate = location.coordinate
@@ -122,7 +122,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         else {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
         
         if let annotationView = annotationView {
@@ -130,6 +129,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "Annotation")
         }
+        
         
         return annotationView
     }
