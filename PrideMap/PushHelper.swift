@@ -63,4 +63,8 @@ class PushHelper: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
+    func removeAllScheduledNotifications(){
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
 }

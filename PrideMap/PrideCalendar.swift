@@ -33,6 +33,8 @@ class PrideCalendar{
     }
     
     private func schedulePushNotifications(){
+        PushHelper.sharedInstance.removeAllScheduledNotifications()
+        
         let calendar = Calendar(identifier: .gregorian)
         
         let componentsStarts1Week = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: startDate.addingTimeInterval(-24 * 60 * 60 * 7))
