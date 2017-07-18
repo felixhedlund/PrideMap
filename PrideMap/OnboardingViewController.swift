@@ -250,13 +250,12 @@ extension OnboardingViewController: CLLocationManagerDelegate{
             let widthC = NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: scrollView, attribute: .width, multiplier: 0.25, constant: 0)
             widthC.isActive = true
             NSLayoutConstraint(item: circleView, attribute: .width, relatedBy: .equal, toItem: circleView, attribute: .height, multiplier: 1, constant: 0).isActive = true
-            keepView(circleView, onPages: [2, 2.5])
+            keepView(circleView, onPages: [2])
             
             let animate = ConstraintMultiplierAnimation(superview: scrollView, constraint: widthC, attribute: .width, referenceView: circleView)
-            animate[0] = 0.25
-            animate[1] = 0.5
+            animate[1.9] = 0.9
             animate[2] = 1
-            animate[2.5] = 0.5
+            animate[2.1] = 0.9
             animator.addAnimation(animate)
             
             
@@ -264,7 +263,8 @@ extension OnboardingViewController: CLLocationManagerDelegate{
             
             let animate2 = AlphaAnimation(view: circleView)
             animate2[0] = 0.25
-            animate2[1] = 0.5
+            animate2[1] = 0
+            animate2[1.9] = 0.5
             animate2[2] = 1
             animate2[2.5] = 0.5
             animator.addAnimation(animate2)
