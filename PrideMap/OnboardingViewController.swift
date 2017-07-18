@@ -364,6 +364,11 @@ extension OnboardingViewController{
     
     private func addContinueButton(){
         continueButton = UIButton()
+        continueButton.backgroundColor = UIColor.white
+        continueButton.showsTouchWhenHighlighted = true
+        continueButton.layer.borderColor = UIColor.black.cgColor
+        continueButton.layer.cornerRadius = 8
+        continueButton.layer.borderWidth = 2
         continueButton.tintColor = UIColor.black
         continueButton.setTitle(NSLocalizedString("Continue", comment: "Continue string"), for: .normal)
         if shouldEnableContinueAtStart{
@@ -381,6 +386,8 @@ extension OnboardingViewController{
         contentView.addSubview(continueButton)
         
         NSLayoutConstraint(item: continueButton, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .centerY, multiplier: 1, constant: 16).isActive = true
+        NSLayoutConstraint(item: continueButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 160).isActive = true
+        NSLayoutConstraint(item: continueButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 60).isActive = true
         keepView(continueButton, onPages: [2])
         let animate = AlphaAnimation(view: continueButton)
         animate[1.5] = 0
