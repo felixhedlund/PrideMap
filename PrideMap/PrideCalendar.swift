@@ -129,6 +129,7 @@ class PrideCalendar{
         calendar.locale = Locale.current
         let components = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: now, to: start)
         var returnString = NSLocalizedString("The parade starts in: ", comment: "parade starts in string")
+        returnString.append("\n")
         if let months = components.month{
             if months != 0{
                 var monthString = ""
