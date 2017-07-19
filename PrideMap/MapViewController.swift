@@ -16,6 +16,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var messageLabel: UILabel!
     var prideCalendar: PrideCalendar!
     
+    @IBOutlet weak var locationModeButton: UIButton!
+    var isFollowingUser = false
     override func viewDidLoad() {
         super.viewDidLoad()
         prideCalendar = PrideCalendar(delegate: self)
@@ -90,6 +92,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func didPressLocationMode(_ sender: Any) {
+        if isFollowingUser{
+            self.map.userTrackingMode = .none
+            self.locationModeButton.setImage(UIImage(named: "arrow-unfilled"), for: .normal)
+        }else{
+            self.map.userTrackingMode = .follow
+            self.locationModeButton.setImage(UIImage(named: "arrow-filled"), for: .normal)
+        }
+        isFollowingUser = !isFollowingUser
+    }
+    
+    
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {

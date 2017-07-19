@@ -132,64 +132,54 @@ class PrideCalendar{
         let components = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: now, to: start)
         var returnString = NSLocalizedString("The parade starts in: ", comment: "parade starts in string")
         returnString.append("\n")
-        if let months = components.month{
-            if months != 0{
-                var monthString = ""
-                if months == 1{
-                    monthString = NSLocalizedString("month", comment: "monthString")
-                }else{
-                    monthString = NSLocalizedString("months", comment: "monthsString")
-                }
-                returnString.append("\(months) \(monthString), ")
-            }
-        }
+//        if let months = components.month{
+//            var monthString = ""
+//            if months == 1{
+//                monthString = NSLocalizedString("month", comment: "monthString")
+//            }else{
+//                monthString = NSLocalizedString("months", comment: "monthsString")
+//            }
+//            returnString.append("\(months) \(monthString), ")
+//        }
         
         if let days = components.day{
-            if days != 0{
-                var dayString = ""
-                if days == 1{
-                    dayString = NSLocalizedString("day", comment: "dayString")
-                }else{
-                    dayString = NSLocalizedString("days", comment: "daysString")
-                }
-                returnString.append("\(days) \(dayString), ")
+            var dayString = ""
+            if days == 1{
+                dayString = NSLocalizedString("day", comment: "dayString")
+            }else{
+                dayString = NSLocalizedString("days", comment: "daysString")
             }
+            returnString.append("\(days) \(dayString), ")
         }
         
         if let hours = components.hour{
-            if hours != 0{
-                var dayString = ""
-                if hours == 1{
-                    dayString = NSLocalizedString("hour", comment: "hourString")
-                }else{
-                    dayString = NSLocalizedString("hours", comment: "hoursString")
-                }
-                returnString.append("\(hours) \(dayString), ")
+            var dayString = ""
+            if hours == 1{
+                dayString = NSLocalizedString("hour", comment: "hourString")
+            }else{
+                dayString = NSLocalizedString("hours", comment: "hoursString")
             }
+            returnString.append("\(hours) \(dayString), ")
         }
         
         if let minutes = components.minute{
-            if minutes != 0{
-                var minuteString = ""
-                if minutes == 1{
-                    minuteString = NSLocalizedString("minute", comment: "minuteString")
-                }else{
-                    minuteString = NSLocalizedString("minutes", comment: "minutesString")
-                }
-                returnString.append("\(minutes) \(minuteString), ")
+            var minuteString = ""
+            if minutes == 1{
+                minuteString = NSLocalizedString("minute", comment: "minuteString")
+            }else{
+                minuteString = NSLocalizedString("minutes", comment: "minutesString")
             }
+            returnString.append("\(minutes) \(minuteString), ")
         }
         
         if let seconds = components.second{
-            if seconds != 0{
-                var secondString = ""
-                if seconds == 1{
-                    secondString = NSLocalizedString("second", comment: "secondString")
-                }else{
-                    secondString = NSLocalizedString("seconds", comment: "secondsString")
-                }
-                returnString.append("\(seconds) \(secondString)")
+            var secondString = ""
+            if seconds == 1{
+                secondString = NSLocalizedString("second", comment: "secondString")
+            }else{
+                secondString = NSLocalizedString("seconds", comment: "secondsString")
             }
+            returnString.append("\(seconds) \(secondString)")
         }
         return returnString
     }
