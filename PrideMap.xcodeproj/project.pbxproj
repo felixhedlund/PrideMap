@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB4B7988058D688AA85EAE97 /* Pods_PrideMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AD5AEB0C17F2708F2B60B /* Pods_PrideMap.framework */; };
 		F70794871F1DFD570053B1CD /* PrideCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70794861F1DFD570053B1CD /* PrideCalendar.swift */; };
+		F70E73701F1F9C1C00D763C3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F70E736F1F1F9C1C00D763C3 /* Settings.bundle */; };
 		F728B7C51F1CDF3C008947A8 /* TargetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */; };
 		F73314171F1CEE630002BE60 /* CircleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73314161F1CEE630002BE60 /* CircleMap.swift */; };
 		F73314191F1CEE6E0002BE60 /* CircleMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73314181F1CEE6E0002BE60 /* CircleMap.xib */; };
@@ -32,6 +33,7 @@
 		E81AB441FC15F8A292C5C2D7 /* Pods-PrideMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B4CCA56A9618CBA7748888 /* Pods-PrideMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrideMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrideMap/Pods-PrideMap.release.xcconfig"; sourceTree = "<group>"; };
 		F70794861F1DFD570053B1CD /* PrideCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrideCalendar.swift; sourceTree = "<group>"; };
+		F70E736F1F1F9C1C00D763C3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F728B7C41F1CDF3C008947A8 /* TargetConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConstants.swift; sourceTree = "<group>"; };
 		F73314161F1CEE630002BE60 /* CircleMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMap.swift; sourceTree = "<group>"; };
 		F73314181F1CEE6E0002BE60 /* CircleMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleMap.xib; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				F77F1E7F1F17A3F5001DD7E5 /* Assets.xcassets */,
 				F77F1E811F17A3F5001DD7E5 /* LaunchScreen.storyboard */,
 				F77F1E841F17A3F5001DD7E5 /* Info.plist */,
+				F70E736F1F1F9C1C00D763C3 /* Settings.bundle */,
 				F73314271F1D14700002BE60 /* Localizable.strings */,
 			);
 			path = PrideMap;
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70E73701F1F9C1C00D763C3 /* Settings.bundle in Resources */,
 				F772E2501F17FA4500264DD8 /* CircleView.xib in Resources */,
 				F77F1E831F17A3F5001DD7E5 /* LaunchScreen.storyboard in Resources */,
 				F73314251F1D14700002BE60 /* Localizable.strings in Resources */,
