@@ -104,6 +104,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         isFollowingUser = !isFollowingUser
     }
     
+    func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool) {
+        if mode == .follow{
+            self.locationModeButton.setImage(UIImage(named: "arrow-filled"), for: .normal)
+            isFollowingUser = true
+        }else{
+            self.locationModeButton.setImage(UIImage(named: "arrow-unfilled"), for: .normal)
+            isFollowingUser = false
+        }
+    }
+    
     
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
